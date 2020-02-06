@@ -1,0 +1,486 @@
+/*
+Theme Name: eduhub
+Theme URI: 
+Author: Anis Arronno
+Author URI:
+Description:  Multi Pages Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: eduhub
+Tags: blog, education, one-colum, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
+*/
+/* --------------------------------------------------------------
+# Normalize Typograpy
+--------------------------------------------------------------*/
+body {
+    margin: 0;
+    -webkit-font-smoothing: auto;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 2.5rem;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+.jurist-menu > h1 > a {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.search {}
+
+/*-------------------------------
+contact form section custom css 
+-----------------------------------*/
+.wpcf7-submit {
+    width: 25%;
+    height: 30px;
+    background-color: #83B582;
+    border-radius: 10%;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.wpcf7-form-control {
+    height: 43px;
+    display: block;
+    width: 170%;
+    height: calc(2.25rem + 20px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+
+}
+
+.wpcf7-textarea {
+    height: 200px;
+    width: 170%;
+}
+
+@media only screen and (max-width:620px) {
+    .wpcf7-form-control {
+        width: 100%;
+    }
+
+}
+
+.wpcf7-submit {
+    width: 40%;
+    height: 60px;
+    background-color: #83B582;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+.wpcf7-form > p > label {
+    color: black;
+    font-size: 18px;
+}
+
+/*--------------------------------------
+contact form section custom css  end 
+----------------------------------------*/
+
+.sheading {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.picon::before {
+    font-size: 60px;
+
+}
+
+.heading-section > .subheading {
+    font-size: 25px;
+}
+
+/*
+--------------------------------
+ comments section custom css 
+------------------------------------*/
+
+/*coment form*/
+.comment-form-wrap {
+    background: #F8F9FA;
+}
+
+.comment-form-wrap > h3 {
+    padding-left: 10px;
+}
+
+.comment-reply-title {
+    padding-left: 10px;
+}
+
+.comment-form-comment textarea {
+    overflow: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.comment-form p {
+    padding: 3%;
+}
+
+.comment-form-author > input {
+    padding: 15px;
+    line-height: normal;
+    border-radius: 30px;
+    width: 100%;
+    box-shadow: inset 0px 0px 1px 1px white;
+}
+
+.comment-form-author > level {
+    font-size: 20px;
+}
+
+.comment-form-email > input {
+    padding: 15px;
+    line-height: normal;
+    border-radius: 30px;
+    width: 100%;
+    box-shadow: inset 0px 0px 1px 1px white;
+}
+
+.comment-notes #email-notes {
+    padding-left: 10px;
+}
+
+.comment-form-url > input {
+    padding: 15px;
+    line-height: normal;
+    border-radius: 30px;
+    width: 100%;
+    box-shadow: inset 0px 0px 1px 1px white;
+}
+
+.form-submit .submit {
+    background: #83B582;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #007bff;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/*Comment list*/
+@media only screen and (max-width:620px) {
+
+    /* For mobile phones: */
+    .comment-list li .comment-body .reply {
+        background: #E3E3E3;
+        color: #000;
+        text-transform: uppercase;
+        border-radius: 20px;
+    }
+}
+
+@media only screen and (min-width:620px) {
+    .comment-list li .comment-body .reply {
+        padding: 5px 10px;
+        background: #E3E3E3;
+        color: #000;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 80%;
+        border-radius: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.comment-list li .comment-body .reply a {
+    color: black;
+}
+
+.comment-list li .comment-body .reply:hover {
+    background: #c2c2c2;
+}
+
+.comment-content {
+    text-align: left;
+    color: black;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.comment-author {
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.comment-metadata {
+    margin-right: 20px;
+    padding: 20px;
+}
+
+
+/*-------------------
+search form
+-----------------------*/
+.pagination {
+    border-top: 3px solid #E7EAED;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.single-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.margin-top {
+    margin-top: 100px;
+}
+
+.search-highlight {
+    background-color: #ff0;
+    font-weight: bold;
+}
+
+.header__search-form .hide-content {
+    position: absolute;
+    left: -9999px;
+}
+
+.h-entry > p {
+    text-align: justify;
+}
+
+/*------------------------*/
+/*bradcumbs*/
+/*---------------------------*/
+
+.breadcrumb {
+    background-color: transparent;
+    color: #f1f1f1;
+    text-align: center;
+    margin-left: 35%;
+}
+
+.breadcrumb a {
+
+    color: #fff;
+    text-align: center;
+}
+
+.breadcrumb li {
+    padding: 10px;
+}
+
+.breadcrumb li:not(:last-child):after {
+    content: ' \003E';
+}
+
+.jcategory {
+    text-align: center;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.jarchive {
+    text-align: center;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+@media only screen and (max-width:620px) {
+    .breadcrumb {
+        margin-left: 10%;
+
+    }
+
+    .jurist-newsletter {
+        margin-left: 10%;
+    }
+}
+
+/*
+-------------
+cusom css
+--------------*/
