@@ -51,8 +51,8 @@ function eduhub_theme_setup() {
 		'comment-list',
 	) );
     $eduhub_custom_logo_defaults = array(
-        "width"  => '45px',
-        "height" => '45px'
+        "width"  => '90px',
+        "height" => '90px'
     );
     add_theme_support( "custom-logo", $eduhub_custom_logo_defaults );
 	add_theme_support( 'custom-background', apply_filters( 'eduhub_custom_background_args', array(
@@ -87,7 +87,7 @@ function eduhub_assets(){
     wp_enqueue_style('flaticon-css',get_theme_file_uri('/assets/css/flaticon.css'));
     wp_enqueue_style('icomoon-css',get_theme_file_uri('/assets/css/icomoon.css'));
     wp_enqueue_style('aos-css',get_theme_file_uri('/assets/css/aos.css'));
-    wp_enqueue_style('eduhub-design-css',get_theme_file_uri('/assets/css/style.css'));
+    wp_enqueue_style('eduhub-design-css',get_theme_file_uri('/assets/css/style.css'),null,VERSION);
 	wp_enqueue_style('eduhub-css',get_stylesheet_uri(),null,VERSION);
     
     

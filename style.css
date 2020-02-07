@@ -484,3 +484,29 @@ search form
 -------------
 cusom css
 --------------*/
+#ftco-navbar{
+    height: 80px;
+}
+
+
+@media only screen and (max-width:720px) {
+    .social-topbar {
+    display: none;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
