@@ -5,7 +5,7 @@
             <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-white ">
                 <div class="media block-6 d-block text-center">
                     <div class="icon d-flex justify-content-center align-items-center" id="eduhub-featured-con-one">
-                        <span class="<?php echo esc_html(get_theme_mod('eduhub_featured_post_icon_one',__('flaticon-teacher','eduhub')));?>"></span>
+                        <span class="<?php echo esc_attr(get_theme_mod('eduhub_featured_post_icon_one',__('flaticon-teacher','eduhub')));?>"></span>
                     </div>
                     <div class="media-body p-2 mt-3 text-dark">
                         <h3 class="heading text-dark" id="eduhub-fph1"><?php echo esc_html(get_theme_mod('eduhub_featured_post_heading_one',__('Certified Teachers','eduhub')));?></h3>
@@ -16,7 +16,7 @@
             <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-white">
                 <div class="media block-6 d-block text-center">
                     <div class="icon d-flex justify-content-center align-items-center" id="eduhub-featured-con-two">
-                        <span class="<?php echo esc_html(get_theme_mod('eduhub_featured_post_icon_two',__('flaticon-reading','eduhub')));?>"></span>
+                        <span class="<?php echo esc_attr(get_theme_mod('eduhub_featured_post_icon_two',__('flaticon-reading','eduhub')));?>"></span>
                     </div>
                     <div class="media-body p-2 mt-3 text-dark">
                         <h3 class="heading text-dark" id="eduhub-fph2"><?php echo esc_html(get_theme_mod('eduhub_featured_post_heading_two',__('Special Education','eduhub')));?></h3>
@@ -28,7 +28,7 @@
             <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-white">
                 <div class="media block-6 d-block text-center">
                     <div class="icon d-flex justify-content-center align-items-center" id="eduhub-featured-con-three">
-                        <span class="<?php echo esc_html(get_theme_mod('eduhub_featured_post_icon_three',__('flaticon-books','eduhub')));?>"></span>
+                        <span class="<?php echo esc_attr(get_theme_mod('eduhub_featured_post_icon_three',__('flaticon-books','eduhub')));?>"></span>
                     </div>
                     <div class="media-body p-2 mt-3 text-dark">
                        <h3 class="heading text-dark" id="eduhub-fph3"><?php echo esc_html(get_theme_mod('eduhub_featured_post_heading_three',__('Book &amp; Library','eduhub')));?></h3>
@@ -40,7 +40,7 @@
             <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate  bg-white"  id="eduhub-featured-con-four">
                 <div class="media block-6 d-block text-center">
                     <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="<?php echo esc_html(get_theme_mod('eduhub_featured_post_icon_four',__('flaticon-diploma','eduhub')));?>"></span>
+                        <span class="<?php echo esc_attr(get_theme_mod('eduhub_featured_post_icon_four',__('flaticon-diploma','eduhub')));?>"></span>
                     </div>
                     <div class="media-body p-2 mt-3 text-dark">
                        <h3 class="heading text-dark" id="eduhub-fph4"><?php echo esc_html(get_theme_mod('eduhub_featured_post_heading_four',__('Certification','eduhub')));?></h3>

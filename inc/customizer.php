@@ -146,13 +146,16 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 		'section'  => 'eduhub_front_page',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
-         'choices' => array(
+        'choices' => array(
              'flaticon-teacher' => __( 'Teacher' ),
              'flaticon-reading' => __( 'Reading' ),
              'flaticon-books' => __( 'Books' ),
              'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
         ),
-        
 	) );
     
         
@@ -208,8 +211,11 @@ function eduhub_customizer_settings( $wp_eduhub ) {
              'flaticon-reading' => __( 'Reading' ),
              'flaticon-books' => __( 'Books' ),
              'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
         ),
-        
 	) );
     
         
@@ -262,11 +268,15 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 		'section'  => 'eduhub_front_page',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
-         'choices' => array(
+       'choices' => array(
              'flaticon-teacher' => __( 'Teacher' ),
              'flaticon-reading' => __( 'Reading' ),
              'flaticon-books' => __( 'Books' ),
              'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
         ),
         
 	) );
@@ -320,11 +330,15 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 		'section'  => 'eduhub_front_page',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
-         'choices' => array(
+        'choices' => array(
              'flaticon-teacher' => __( 'Teacher' ),
              'flaticon-reading' => __( 'Reading' ),
              'flaticon-books' => __( 'Books' ),
              'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
         ),
         
 	) );
@@ -476,12 +490,307 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
     
     
+       /* Statistics*/
+    
+    $wp_eduhub->add_setting( 'eduhub_statistics_heading', array(
+		'default'   => "",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_heading', array(
+		'label'    => __( 'Statistics Section Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_statistics_heading',array(
+		'selector'=>'#eduhub-statistics-heading',
+		'settings'=>'eduhub_statistics_heading',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_statistics_heading');
+		}
+	));
     
     
+            
+    
+    $wp_eduhub->add_setting( 'eduhub_statistics_description', array(
+		'default'   => "",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_description', array(
+		'label'    => __( 'Statistics Section Description', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'textarea',
+	) );
+    
+         
+           
+        
+    $wp_eduhub->add_setting( 'eduhub_statistics_icon_one', array(
+		'default'   => "flaticon-reading",
+		'transport' => 'postMessage',
+	) );
+    
+    $wp_eduhub->add_control( 'eduhub_statistics_icon_one', array(
+		'label'    => __( 'Statistics Icon One', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+        'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
+		'type'     => 'select',
+         'choices' => array(
+             'flaticon-teacher' => __( 'Teacher' ),
+             'flaticon-reading' => __( 'Reading' ),
+             'flaticon-books' => __( 'Books' ),
+             'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
+        ),
+        
+	) );
+    
+        
+    $wp_eduhub->add_setting( 'eduhub_statistics_one', array(
+		'default'   => "50",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_one', array(
+		'label'    => __( 'Statistics Countries Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'number'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_statistics_one',array(
+		'selector'=>'#eduhub-statistics-one',
+		'settings'=>'eduhub_statistics_one',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_statistics_one');
+		}
+	));
+           
+    $wp_eduhub->add_setting( 'eduhub_statistics_content_heading_one', array(
+		'default'   => "Countries",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_content_heading_one', array(
+		'label'    => __( 'Statistics Countries Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+     $wp_eduhub->add_setting( 'eduhub_statistics_icon_two', array(
+		'default'   => "flaticon-reading",
+		'transport' => 'postMessage',
+	) );
+    
+    $wp_eduhub->add_control( 'eduhub_statistics_icon_two', array(
+		'label'    => __( 'Statistics Icon Three', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+        'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
+		'type'     => 'select',
+         'choices' => array(
+             'flaticon-teacher' => __( 'Teacher' ),
+             'flaticon-reading' => __( 'Reading' ),
+             'flaticon-books' => __( 'Books' ),
+             'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
+        ),
+        
+	) );
+        
+    $wp_eduhub->add_setting( 'eduhub_statistics_two', array(
+		'default'   => "200",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_two', array(
+		'label'    => __( 'Statistics Student Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'number'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_statistics_two',array(
+		'selector'=>'#eduhub-statistics-two',
+		'settings'=>'eduhub_statistics_two',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_statistics_two');
+		}
+	));
+           
+    $wp_eduhub->add_setting( 'eduhub_statistics_content_heading_two', array(
+		'default'   => "Student Visa",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_content_heading_two', array(
+		'label'    => __( 'Statistics Student Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
     
     
+        
+            
+       
+    $wp_eduhub->add_setting( 'eduhub_statistics_icon_three', array(
+		'default'   => "flaticon-reading",
+		'transport' => 'postMessage',
+	) );
+    
+    $wp_eduhub->add_control( 'eduhub_statistics_icon_three', array(
+		'label'    => __( 'Statistics Icon Three', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+        'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
+		'type'     => 'select',
+         'choices' => array(
+             'flaticon-teacher' => __( 'Teacher' ),
+             'flaticon-reading' => __( 'Reading' ),
+             'flaticon-books' => __( 'Books' ),
+             'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
+        ),
+        
+	) );
+       
+  
+        
+    $wp_eduhub->add_setting( 'eduhub_statistics_three', array(
+		'default'   => "200",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_three', array(
+		'label'    => __( 'Statistics Happy Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'number'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_statistics_three',array(
+		'selector'=>'#eduhub-statistics-three',
+		'settings'=>'eduhub_statistics_three',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_statistics_three');
+		}
+	));
+           
+    $wp_eduhub->add_setting( 'eduhub_statistics_content_heading_three', array(
+		'default'   => "Happy Smiles",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_content_heading_three', array(
+		'label'    => __( 'Statistics Happy Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
     
     
+        
+        
+                 
+       
+    $wp_eduhub->add_setting( 'eduhub_statistics_icon_four', array(
+		'default'   => "flaticon-reading",
+		'transport' => 'postMessage',
+	) );
+    
+    $wp_eduhub->add_control( 'eduhub_statistics_icon_four', array(
+		'label'    => __( 'Statistics Icon four', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+        'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
+		'type'     => 'select',
+         'choices' => array(
+             'flaticon-teacher' => __( 'Teacher' ),
+             'flaticon-reading' => __( 'Reading' ),
+             'flaticon-books' => __( 'Books' ),
+             'flaticon-diploma' => __( 'Diploma' ),
+             'flaticon-security' => __( 'Security' ),
+             'flaticon-education' => __( 'Education' ),
+             'flaticon-jigsaw' => __( 'Jigsaw' ),
+             'flaticon-kids' => __( 'kids' ),
+        ),
+        
+	) );
+        
+    $wp_eduhub->add_setting( 'eduhub_statistics_four', array(
+		'default'   => "200",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_four', array(
+		'label'    => __( 'Statistics parners Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'number'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_statistics_four',array(
+		'selector'=>'#eduhub-statistics-four',
+		'settings'=>'eduhub_statistics_four',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_statistics_four');
+		}
+	));
+           
+    $wp_eduhub->add_setting( 'eduhub_statistics_content_heading_four', array(
+		'default'   => "Partners",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_statistics_content_heading_four', array(
+		'label'    => __( 'Statistics parners Section', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+    
+   
+    $wp_eduhub->add_setting( 'eduhub_Statistics_image', array(
+		'default'   => "Upload Image",
+		'transport' => 'refresh',
+	) );
+
+	$wp_eduhub->add_control(
+		new WP_Customize_Image_Control(
+			$wp_eduhub,
+			'eduhub_about_image',
+			array(
+				'label'      => __( 'Upload Statistics Image', 'theme_name' ),
+				'section'    => 'eduhub_front_page',
+				'settings'   => 'eduhub_Statistics_image',
+			)
+		)
+	);
+    
+    
+	$wp_eduhub->selective_refresh->add_partial('eduhub_Statistics_image',array(
+		'selector'=>'#about-image',
+		'settings'=>'eduhub_Statistics_image',
+		'render_callback'=>function(){
+			return apply_filters('the_content',get_theme_mod('eduhub_Statistics_image'));
+		}
+	)); 
+     
+    
+ 
+    
+
+    
+
     
     
     

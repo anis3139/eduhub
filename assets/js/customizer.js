@@ -120,12 +120,58 @@
         value.bind(function(newvalue){
             $("#eduhub-about-content-desc-three").html(newvalue);
         });
+    });            
+
+    
+ /*   statistics sections*/
+    
+    
+    wp.customize('eduhub_statistics_description',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-statistics-section-desc").html(newvalue);
+        });
     });
-    
-    
-    
-    
-    
+        
+    wp.customize('eduhub_statistics_content_heading_one',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-statistics-content-heading-one").html(newvalue);
+        });
+    });
+    wp.customize('eduhub_statistics_content_heading_two',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-statistics-content-heading-two").html(newvalue);
+        });
+    });    
+    wp.customize('eduhub_statistics_content_heading_three',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-statistics-content-heading-three").html(newvalue);
+        });
+    });    
+    wp.customize('eduhub_statistics_content_heading_four',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-statistics-content-heading-four").html(newvalue);
+        });
+    });
+    wp.customize('eduhub_statistics_icon_one',function(value){
+        value.bind(function(newvalue){
+            $("#statistics-icon-one").html(newvalue);
+        });
+    });   
+    wp.customize('eduhub_statistics_icon_two',function(value){
+        value.bind(function(newvalue){
+            $("#statistics-icon-two").html(newvalue);
+        });
+    });    
+    wp.customize('eduhub_statistics_icon_three',function(value){
+        value.bind(function(newvalue){
+            $("#statistics-icon-three").html(newvalue);
+        });
+    });    
+    wp.customize('eduhub_statistics_icon_four',function(value){
+        value.bind(function(newvalue){
+            $("#statistics-icon-four").html(newvalue);
+        });
+    });
     
     
     
