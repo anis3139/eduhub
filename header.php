@@ -21,7 +21,7 @@
                             <div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
                             <a href="tel:<?php echo esc_html(get_theme_mod('eduhub_mobile',__('00801816366535','eduhub')));?>"><span class="text" id="eduhub-mobile"><?php echo esc_html(get_theme_mod('eduhub_mobile',__('00801816366535','eduhub')));?></span></a>
                         </div>
-                        <div class="col-md pr-4 d-flex topper align-items-center justify-content-around" >
+                        <div class="col-md pr-4 d-flex topper align-items-center justify-content-around social-icon pb-1" >
                             <div class="text-white ftco-footer-social list-unstyled float-md-left float-lft mr-2 pt-3">
                                 <li class="ftco-animate" id="eduhub-facebook"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_facebook',__('https://www.facebook.com/anis3139','eduhub')));?>"><span class="icon-facebook"></span></a></li>
                                  <li class="ftco-animate" id="eduhub-twitter"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_twitter',__('https://www.twitter.com/anis3139','eduhub')));?>"><span class="icon-twitter"></span></a></li>
@@ -34,31 +34,5 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
-        <div class="container d-flex align-items-center">
-            <a class="navbar-brand" href="<?php site_url();?>"> <?php if(has_custom_logo()){
-                  the_custom_logo();
-                }else{
-                    echo "<h1><a href='".home_url("/")."'>".get_bloginfo('name')."</a></h1>";
-                }
-                ?></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> <?php _e('Menu','eduhub')?>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="ftco-nav">
-                
-                    
-                <?php
-		             wp_nav_menu( array(
-                            'theme_location'  => 'primary',
-                            'depth'           => 2,
-                            'menu_class'      => 'navbar-nav ml-auto',
-                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'         => new WP_Bootstrap_Navwalker(),
-                        ) );
-		           ?>
-                
-            </div>
-        </div>
-    </nav>
+
     <!-- END nav -->

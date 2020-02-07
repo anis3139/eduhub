@@ -367,6 +367,113 @@ function eduhub_customizer_settings( $wp_eduhub ) {
  
     
     
+   /* About Section*/
+    
+    
+    $wp_eduhub->add_setting( 'eduhub_about_heading', array(
+		'default'   => "Why We Are The Best",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_heading', array(
+		'label'    => __( 'About Section Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_about_heading',array(
+		'selector'=>'#eduhub-about-heading',
+		'settings'=>'eduhub_about_heading',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_about_heading');
+		}
+	));
+    
+    
+       
+    $wp_eduhub->add_setting( 'eduhub_about_sub_heading', array(
+		'default'   => "",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_sub_heading', array(
+		'label'    => __( 'About Section Sub Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'textarea'
+	) );
+      
+    
+    
+    
+    $wp_eduhub->add_setting( 'eduhub_about_content_heading_one', array(
+		'default'   => "Learning system",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_content_heading_one', array(
+		'label'    => __( 'About Section Content Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+    $wp_eduhub->add_setting( 'eduhub_about_content_desc_one', array(
+		'default'   => "Far far away, behind the word mountains, far from the countries Vokalia.",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_content_desc_one', array(
+		'label'    => __( 'About Section Content Descriptions', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'textarea'
+	) );
+    
+    
+        
+    $wp_eduhub->add_setting( 'eduhub_about_content_heading_two', array(
+		'default'   => "Learning system",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_content_heading_two', array(
+		'label'    => __( 'About Section Content Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+    $wp_eduhub->add_setting( 'eduhub_about_content_desc_two', array(
+		'default'   => "Far far away, behind the word mountains, far from the countries Vokalia.",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_content_desc_two', array(
+		'label'    => __( 'About Section Content Descriptions', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'textarea'
+	) );
+    
+           
+    $wp_eduhub->add_setting( 'eduhub_about_content_heading_three', array(
+		'default'   => "Learning system",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_content_heading_three', array(
+		'label'    => __( 'About Section Content Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+    $wp_eduhub->add_setting( 'eduhub_about_content_desc_three', array(
+		'default'   => "Far far away, behind the word mountains, far from the countries Vokalia.",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_about_content_desc_three', array(
+		'label'    => __( 'About Section Content Descriptions', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'textarea'
+	) );
     
     
     

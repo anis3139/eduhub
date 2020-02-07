@@ -75,5 +75,62 @@
     });
     
     
+    /*about section*/
+    
+    wp.customize('eduhub_about_sub_heading',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-about-sheading").html(newvalue);
+        });
+    });
+        
+    wp.customize('eduhub_about_content_heading_one',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-about-content-heading-one").html(newvalue);
+        });
+    });
+    
+            
+    wp.customize('eduhub_about_content_desc_one',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-about-content-desc-one").html(newvalue);
+        });
+    });
+    
+    wp.customize('eduhub_about_content_heading_two',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-about-content-heading-two").html(newvalue);
+        });
+    });
+    
+            
+    wp.customize('eduhub_about_content_desc_two',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-about-content-desc-two").html(newvalue);
+        });
+    });
+    
+    wp.customize('eduhub_about_content_heading_three',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-about-content-heading-three").html(newvalue);
+        });
+    });
+    
+            
+    wp.customize('eduhub_about_content_desc_three',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-about-content-desc-three").html(newvalue);
+        });
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 })(jQuery);
