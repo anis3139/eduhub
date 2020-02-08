@@ -144,7 +144,7 @@ function eduhub_widgets_init() {
 		'name'          => esc_html__( 'Footer Sidebar one', 'eduhub' ),
 		'id'            => 'footer-sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'eduhub' ),
-		'before_widget' => '<div id="%1$s" class="pl-2 text-light widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="pl-2 list-unstyled text-light widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="footer-heading mb-4 text-light widget-title">',
 		'after_title'   => '</h3>',
