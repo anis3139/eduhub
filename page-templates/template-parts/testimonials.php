@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section ftco-animate">
-                <h2 class="mb-4" id="eduhub-testimonials-heading"><?php echo esc_html(get_theme_mod('eduhub_testimonials_heading',__('What Parents Says About Us','eduhub')));?></h2>
+                <h2 class="mb-4 text-dark" id="eduhub-testimonials-heading"><?php echo esc_html(get_theme_mod('eduhub_testimonials_heading',__('What Parents Says About Us','eduhub')));?></h2>
                 <p id="eduhub-testimonials-description"><?php echo esc_html(get_theme_mod('eduhub_testimonials__description'));?></p>
             </div>
         </div>

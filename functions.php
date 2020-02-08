@@ -206,7 +206,7 @@ function eduhub_about_page_template_banner() {
         if ( current_theme_supports( "custom-header" ) ) {
             ?>
 <style>
-    .hero-wrap {
+    .hero-wrap-2 {
         background-image: url(<?php echo header_image();
         ?>);
         background-size: cover;

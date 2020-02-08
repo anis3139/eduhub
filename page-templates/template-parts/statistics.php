@@ -2,7 +2,7 @@
  $eduhub_statistics_image_id =get_theme_mod("eduhub_Statistics_image","large");
 ?>
 
-<section class="ftco-section ftco-counter img statistics" id="section-counter" style="background-image: url(<?php echo esc_url($eduhub_statistics_image_id);?>);" data-stellar-background-ratio="0.5">
+<section class="ftco-section ftco-counter img statistics" id="section-counter Statistics-image" style="background-image: url(<?php echo esc_url($eduhub_statistics_image_id);?>);" data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center heading-section heading-section-black ftco-animate">

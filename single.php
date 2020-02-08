@@ -43,7 +43,7 @@
                         <?php echo get_avatar( get_the_author_meta( "ID"));?>
                     </div>
                     <div class="desc">
-                        <h3><?php echo esc_html(get_the_author_meta( "display_name" )); ?></h3>
+                        <a href="<?php the_permalink();?>"><h3><?php echo esc_html(get_the_author_meta( "display_name" )); ?></h3></a>
                         <p><?php echo esc_html(get_the_author_meta( "description" )); ?></p>
                     </div>
                 </div>

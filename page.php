@@ -18,7 +18,7 @@
                 while(have_posts()):
                 the_post();
                     ?>
-                <div class="co<?php echo esc_attr($eduhub_layout_class_second); ?>  blog-section ftco-animate">
+                <div class="blog-section ftco-animate">
                     <div class="blog-entry">
                         <a href="<?php the_permalink();?>">
                             <?php 

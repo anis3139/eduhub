@@ -225,7 +225,37 @@
         value.bind(function(newvalue){
             $("#eduhub-testimonials-description").html(newvalue);
         });
+    });  
+
+    
+    /*Blog Section*/
+    
+    wp.customize('eduhub_blog_description',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-blogl-description").html(newvalue);
+        });
+    }); 
+    
+    /*Apply Now*/
+    
+    
+    wp.customize('eduhub_apply_now_phone',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-apply-phone").html(newvalue);
+        });
     });
+        
+    wp.customize('eduhub_apply_now_button',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-apply-phone").html(newvalue);
+        });
+    });        
+    wp.customize('eduhub_apply_now_heading',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-apply-now-heading").html(newvalue);
+        });
+    });
+    
     
     
     
