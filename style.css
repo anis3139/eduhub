@@ -336,7 +336,7 @@ contact form section custom css  end
 }
 
 .form-submit .submit {
-    background: #83B582;
+    background: #007bff;
     color: #fff;
     font-size: 30px;
     font-weight: bold;
@@ -489,6 +489,9 @@ cusom css
     #ftco-navbar{
     height: 80px;
 }  
+    .ftco-section {
+    padding: 4em 0;
+}
 }
 
 @media only screen and (max-width:720px) {
@@ -515,6 +518,28 @@ About Section
 }
 
 
+/*--------------------
+Blog Section
+----------------*/
+.blog-section{
+    
+    padding-top: 50px;
+}
 
+.blog-box{
+    
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+.read-more{
+   position: relative;
+    bottom: 0px;
+}
 
-
+.readmore{
+    font-size: 16px;
+    padding: 5px
+    font-weight: bold;
+}

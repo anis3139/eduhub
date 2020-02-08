@@ -11,7 +11,7 @@
 
                     <div class="text pt-3 text-center">
                         <h3 id="eduhub-expert-content-heading-one"><?php echo esc_html(get_theme_mod('eduhub_expert_content_heading_one',__('What We Are','eduhub')));?></h3>
-                        <div class="faded">
+                        <div class="faded mt-3">
                             <p id="eduhub-expert-content_desc-one"><?php echo esc_html(get_theme_mod('eduhub_expert_content_desc_one',__('All sections required for online training are included to Edulogy.All sections required for online training are included to Edulogy','eduhub')));?></p>
                            
                         </div>
@@ -23,7 +23,7 @@
 
                     <div class="text pt-3 text-center">
                         <h3 id="eduhub-expert-content-heading-two"><?php echo esc_html(get_theme_mod('eduhub_expert_content_heading_two',__('What We Are','eduhub')));?></h3>
-                        <div class="faded">
+                        <div class="faded mt-3">
                             <p id="eduhub-expert-content_desc-two"><?php echo esc_html(get_theme_mod('eduhub_expert_content_desc_two',__('All sections required for online training are included to Edulogy.All sections required for online training are included to Edulogy','eduhub')));?></p>
                            
                         </div>
@@ -35,7 +35,7 @@
 
                     <div class="text pt-3 text-center">
                         <h3 id="eduhub-expert-content-heading-three"><?php echo esc_html(get_theme_mod('eduhub_expert_content_heading_three',__('What We Are','eduhub')));?></h3>
-                        <div class="faded">
+                        <div class="faded mt-3">
                             <p id="eduhub-expert-content_desc-three"><?php echo esc_html(get_theme_mod('eduhub_expert_content_desc_three',__('All sections required for online training are included to Edulogy.All sections required for online training are included to Edulogy','eduhub')));?></p>
                            
                         </div>

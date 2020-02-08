@@ -25,7 +25,7 @@ $eduhub_gallery_iamge_large=get_the_post_thumbnail_url(null, "full");
         </div>
         </div>
       </div>
-<?php 
+            <?php 
             endwhile;
             wp_reset_query();
             endif;

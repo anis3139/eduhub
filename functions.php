@@ -62,7 +62,7 @@ function eduhub_theme_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
     // custom Image size.
-    add_image_size( "eduhub-team-image", 500, 500,array("center","center"), true); 
+    add_image_size( "eduhub-blog-image", 400, 300,array("center","center"), true); 
 }
 add_action( 'after_setup_theme', 'eduhub_theme_setup' );
 function eduhub_add_editor_styles() {
@@ -206,14 +206,46 @@ function eduhub_about_page_template_banner() {
         if ( current_theme_supports( "custom-header" ) ) {
             ?>
 <style>
-    .home-slider{
+    .hero-wrap {
         background-image: url(<?php echo header_image();
         ?>);
         background-size: cover;
     }
+
 </style>
 <?php
         }
     }
 }
 add_action( "wp_head", "eduhub_about_page_template_banner", 11 );
+
+
+
+function excerpt($num) {
+	$limit = $num+1;
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	array_pop($excerpt);
+	$excerpt = implode(" ",$excerpt)." <a href='" .get_permalink($post->ID) ." ' class='".readmore."'>Continue Reading &raquo;</a>";
+	echo $excerpt;
+}
+
+
+function eduhub_search_form( $form ) {
+    $homedir      = home_url( "/" );
+    $label        = __( "Search for:", "eduhub" );
+    $button_label = __( "Search", "eduhub" );
+    $newform = <<<FORM
+<form role="search" method="get" class="search-form" action="{$homedir}">
+    <label>
+        <span class="hide-content">{$label}</span>
+        <input type="search" class="form-control" placeholder="Type Keywords" value="" name="s"
+               title="{$label}" autocomplete="off">
+    </label>
+    {$post_type}
+    <input type="submit" class="btn btn-primary btn-sm" value="{$button_label}">
+</form>
+FORM;
+    return $newform;
+}
+add_filter( "get_search_form", "eduhub_search_form" );
+
