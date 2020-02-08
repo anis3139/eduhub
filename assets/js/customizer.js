@@ -173,6 +173,60 @@
         });
     });
     
+/*    
+    -------------
+    experiance
+    ----------------*/
+    
+    wp.customize('eduhub_expert_content_heading_one',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-expert-content-heading-one").html(newvalue);
+        });
+    });
+        
+    wp.customize('eduhub_expert_content_desc_one',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-expert-content_desc-one").html(newvalue);
+        });
+    });
+    
+        
+    wp.customize('eduhub_expert_content_heading_two',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-expert-content-heading-two").html(newvalue);
+        });
+    });
+        
+    wp.customize('eduhub_expert_content_desc_two',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-expert-content_desc-two").html(newvalue);
+        });
+    });
+    
+    
+            
+    wp.customize('eduhub_expert_content_heading_three',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-expert-content-heading-three").html(newvalue);
+        });
+    });
+        
+    wp.customize('eduhub_expert_content_desc_three',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-expert-content_desc-three").html(newvalue);
+        });
+    });
+    
+ /*   ----------------
+        Testimonials
+    --------------------*/
+    
+    wp.customize('eduhub_testimonials_description',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-testimonials-description").html(newvalue);
+        });
+    });
+    
     
     
     

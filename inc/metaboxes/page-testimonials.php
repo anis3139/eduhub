@@ -3,7 +3,7 @@ function jurist_testimonials_metabox( $metaboxes ) {
     $metaboxes[] = array(
         'id'        => 'jurist_testimonials',
         'title'     => __( 'testimonials Details', 'jurist' ),
-        'post_type' => 'testimonials',
+        'post_type' => 'eduhub_testimonials',
         'context'   => 'normal',
         'priority'  => 'default',
         'sections'  => array(

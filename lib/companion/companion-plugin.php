@@ -39,15 +39,16 @@ function jurist_register_my_cpts_section() {
 	register_post_type( "slider", $args );
 
 	
- /*
+
     
 	$labels = [
-		"name" => __( "Our Attorneys", "jurist" ),
-		"singular_name" => __( "Our Attorney", "jurist" ),
+		"name" => __( "Testimonials", "jurist" ),
+		"singular_name" => __( "Testimonial", "jurist" ),
+		"add_new" => __( "Add Testimonial", "jurist" ),
 	];
 
 	$args = [
-		"label" => __( "Our Attorneys", "jurist" ),
+		"label" => __( "Testimonials", "jurist" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => false,
@@ -65,17 +66,17 @@ function jurist_register_my_cpts_section() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"rewrite" => [ "slug" => "Attorneys", "with_front" => true ],
+		"rewrite" => [ "slug" => "testimonials", "with_front" => true ],
 		"query_var" => true,
 		"menu_position" => 20,
 		"menu_icon" => "dashicons-groups",
 		"supports" => [ "title", "editor","thumbnail"],
 	];
 
-	register_post_type( "attorneys", $args );	
+	register_post_type( "eduhub_testimonials", $args );	
     
     
-    $labels = [
+    /* $labels = [
 		"name" => __( "Case Studies", "jurist" ),
 		"singular_name" => __( "Case Study", "jurist" ),
 	];
