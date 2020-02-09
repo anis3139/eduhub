@@ -264,8 +264,13 @@
         });
     });
     
-    
-    
+    /*FAQ section*/
+        
+    wp.customize('eduhub_faq_description',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-faq-section-desc").html(newvalue);
+        });
+    });
     
     
     

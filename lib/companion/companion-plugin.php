@@ -112,13 +112,13 @@ function jurist_register_my_cpts_section() {
 
 	register_post_type( "partners", $args );    
     
- /* $labels = [
-		"name" => __( "Testimonials", "jurist" ),
-		"singular_name" => __( "Testimonial", "jurist" ),
+  $labels = [
+		"name" => __( "FAQ", "jurist" ),
+		"singular_name" => __( "FAQ", "jurist" ),
 	];
 
 	$args = [
-		"label" => __( "Testimonials", "jurist" ),
+		"label" => __( "FAQ", "jurist" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => false,
@@ -136,16 +136,17 @@ function jurist_register_my_cpts_section() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"rewrite" => [ "slug" => "testimonials", "with_front" => true ],
+		"rewrite" => [ "slug" => "faq", "with_front" => true ],
 		"query_var" => true,
 		"menu_position" => 20,
 		"menu_icon" => "dashicons-thumbs-up",
-		"supports" => [ "title", "editor","thumbnail"],
+		"supports" => [ "title", "editor"],
 	];
 
-	register_post_type( "testimonials", $args ); 
+	register_post_type( "faq", $args ); 
     
     
+    /*
     $labels = [
 		"name" => __( "Gallery", "jurist" ),
 		"singular_name" => __( "Gallery Image", "jurist" ),

@@ -790,6 +790,46 @@ why we are
 		'label'    => __( 'Partners Section Description', 'eduhub' ),
 		'section'  => 'eduhub_front_page',
 		'type'     => 'textarea',
+	) );  
+    
+   /* -----------------
+    FAQ section
+    -----------------*/
+    
+    
+    
+   $wp_eduhub->add_setting( 'eduhub_faq_heading', array(
+		'default'   => "Frequently Asked Questions",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_faq_heading', array(
+		'label'    => __( 'FAQ Section Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_faq_heading',array(
+		'selector'=>'#eduhub-faq-heading',
+		'settings'=>'eduhub_faq_heading',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_faq_heading');
+		}
+	));
+    
+    
+            
+    
+    $wp_eduhub->add_setting( 'eduhub_faq_description', array(
+		'default'   => "",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_faq_description', array(
+		'label'    => __( 'FAQ Section Description', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'textarea',
 	) );
     
     
