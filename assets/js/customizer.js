@@ -254,6 +254,14 @@
         value.bind(function(newvalue){
             $("#eduhub-apply-now-heading").html(newvalue);
         });
+    });    
+    
+   /* pertner Sections*/
+    
+    wp.customize('eduhub_partners_description',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-partners-section-desc").html(newvalue);
+        });
     });
     
     

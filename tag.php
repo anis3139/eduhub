@@ -11,7 +11,7 @@
 
                 <div class="row mb-5">
                     <div class="col-12 text-center" data-aos="fade">
-                        <h2 class="section-title pt-5"><span class="text-primary"><?php _e('Post Under: ')?></span><?php single_cat_title();?></h2>
+                        <h2 class="section-title pt-5"><span class="text-primary"><?php _e('Post Under: ')?></span><?php single_tag_title();?></h2>
                     </div>
                 </div>
 
@@ -49,3 +49,4 @@
 <?php get_footer();?>
 
 <?php wp_footer();?>
+s

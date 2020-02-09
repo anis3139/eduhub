@@ -6,7 +6,7 @@
                     <h2 class="mb-4 text-center" id="eduhub-about-heading"><?php echo esc_html(get_theme_mod('eduhub_about_heading',__('Why We Are The Best','eduhub')));?></h2>
                     <p class="text-center" id="eduhub-about-sheading"><?php echo esc_html(get_theme_mod('eduhub_about_sub_heading'));?></p>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-5 about-1">
                     <div class="col-lg-4">
                         <div class="services-2 d-flex">
                             <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="about-number-count"><?php _e('1','eduhub');?></span></div>

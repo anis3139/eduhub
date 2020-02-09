@@ -754,25 +754,43 @@ why we are
 		}
 	));
     
+    /*----------------
+        Partner Section
+        ----------------*/
+    
+   $wp_eduhub->add_setting( 'eduhub_partners_heading', array(
+		'default'   => "",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_partners_heading', array(
+		'label'    => __( 'Partners Section Heading', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'text'
+	) );
+    
+        
+    $wp_eduhub->selective_refresh->add_partial('eduhub_partners_heading',array(
+		'selector'=>'#eduhub-partners-heading',
+		'settings'=>'eduhub_partners_heading',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_partners_heading');
+		}
+	));
     
     
+            
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    $wp_eduhub->add_setting( 'eduhub_partners_description', array(
+		'default'   => "",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_partners_description', array(
+		'label'    => __( 'Partners Section Description', 'eduhub' ),
+		'section'  => 'eduhub_front_page',
+		'type'     => 'textarea',
+	) );
     
     
     

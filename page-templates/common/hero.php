@@ -1,5 +1,5 @@
 <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo get_template_directory_uri()?>.'/assets/images/bg_2.jpg';');">
-    <div class="overlay"></div>
+    <div class=""></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">

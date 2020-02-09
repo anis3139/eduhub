@@ -76,13 +76,16 @@ function jurist_register_my_cpts_section() {
 	register_post_type( "eduhub_testimonials", $args );	
     
     
-    /* $labels = [
-		"name" => __( "Case Studies", "jurist" ),
-		"singular_name" => __( "Case Study", "jurist" ),
+   $labels = [
+		"name" => __( "Partners", "jurist" ),
+		"singular_name" => __( "Partner", "jurist" ),
+		"add_new" => __( "Add Image", "jurist" ),
+		"featured_image" => __( "Pertner Image", "jurist" ),
+		"set_featured_image" => __( "Add Pertner Image", "jurist" ),
 	];
 
 	$args = [
-		"label" => __( "Case Studies", "jurist" ),
+		"label" => __( "Partners", "jurist" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => false,
@@ -104,12 +107,12 @@ function jurist_register_my_cpts_section() {
 		"query_var" => true,
 		"menu_position" => 20,
 		"menu_icon" => "dashicons-format-image",
-		"supports" => [ "title", "editor","thumbnail"],
+		"supports" => [ "title","thumbnail"],
 	];
 
-	register_post_type( "case_studies", $args );    
+	register_post_type( "partners", $args );    
     
-    $labels = [
+ /* $labels = [
 		"name" => __( "Testimonials", "jurist" ),
 		"singular_name" => __( "Testimonial", "jurist" ),
 	];

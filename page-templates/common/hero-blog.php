@@ -8,7 +8,7 @@ $eduhub_banner_image= $eduhub_featured_image;
 
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo $eduhub_banner_image;?>');">
-    <div class="overlay"></div>
+    <div class=""></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
