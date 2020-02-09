@@ -31,7 +31,7 @@
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
-                                <p><?php echo esc_html(wp_trim_words(get_the_excerpt(),30));?></p>
+                                <p class="testimony-hight overflow-hidden"><?php echo esc_html(wp_trim_words(get_the_excerpt(),40));?></p>
                                 <p class="name"><?php the_title();?></p>
                                 <span class="position"><?php 
                                     echo esc_html($eduhub_testimonials_meta['t_designation']);?></span>

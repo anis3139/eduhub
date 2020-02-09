@@ -89,7 +89,24 @@ function eduhub_assets(){
     wp_enqueue_style('aos-css',get_theme_file_uri('/assets/css/aos.css'));
     wp_enqueue_style('eduhub-design-css',get_theme_file_uri('/assets/css/style.css'),null,VERSION);
 	wp_enqueue_style('eduhub-css',get_stylesheet_uri(),null,VERSION);
-    
+    $heading_icon_color = get_theme_mod( 'eduhub_heading_color', '#dd2d6a' );
+    $heading_title_color = get_theme_mod( 'eduhub_title_color', '#dd2d6a' );
+	$heading_style      = <<<EOD
+ .heading-section h2 {
+    color: {$heading_icon_color};
+}
+.slider-text h1{
+    color: {$heading_title_color};
+}
+EOD;
+
+	wp_add_inline_style( 'eduhub-css', $heading_style );
+	
+	
+	
+	
+	
+	
     
 	wp_enqueue_script('jquery-js',get_theme_file_uri('/assets/js/jquery.min.js'),null,'default',true);
 	wp_enqueue_script('bootstrap-js',get_theme_file_uri('/assets/js/bootstrap.min.js'),['jquery'],'default',true);

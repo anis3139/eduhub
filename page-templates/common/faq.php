@@ -8,7 +8,7 @@
             </div>
         </div>
         <!-- Accordion Starts-->
-        <div class="row">
+        <div class="row acc">
             <?php
         $eduhub_faq_posts = new WP_Query( array(
             'post_type' => 'faq',
@@ -19,7 +19,7 @@
             $eduhub_faq_posts->the_post();
         ?>
 
-            <div class="acc col-md-8 offset-md-2">
+            <div class="acc col-md-8 offset-md-2 ftco-animate">
                 <h3><?php the_title();?></h3>
                 <div class="content">
                     <div class="content-inner">

@@ -273,7 +273,28 @@
     });
     
     
-    
+   /* Color Control*/
+	 wp.customize('eduhub_heading_color',function(value){
+        value.bind(function(newvalue){
+            $(".heading-section h2").css("color",newvalue);
+        });
+    })	 
+	wp.customize('eduhub_title_color',function(value){
+        value.bind(function(newvalue){
+            $(".slider-text h1").css("color",newvalue);
+        });
+    })	 
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
     
     
 })(jQuery);

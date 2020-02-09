@@ -832,9 +832,52 @@ why we are
 		'type'     => 'textarea',
 	) );
     
+	
+	
+	/*----------------
+	Color Control
+	-----------------*/
+	
+	 $wp_eduhub->add_section( 'eduhub_heading_color_section', array(
+		'title'           => __( 'Front Page Color Control', 'eduhub' ),
+		'priority'        => '40',
+		'active_callback' => function () {
+			if(is_page_template('page-templates/landing.php')){
+				return true;
+			}
+			return false;
+
+			return is_page_template( 'page-templates/landing.php' );
+		}
+	) );
+	
     
+    $wp_eduhub->add_setting( 'eduhub_heading_color', array(
+		'default'   => '#fda638',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_heading_color_control', array(
+		'label'    => __( 'Header Color Control', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_heading_color'
+	) ) );
     
+    	
+   
+    $wp_eduhub->add_setting( 'eduhub_title_color', array(
+		'default'   => '#fda638',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_title_color_control', array(
+		'label'    => __( 'Title Control', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_title_color'
+	) ) );
     
+    	
+
     
     
     
@@ -1168,14 +1211,3 @@ why we are
 
 add_action( 'customize_register', 'eduhub_customizer_settings' );
 
-
-
-
-
-function homepage_sub_heading_display() {
-	if ( get_theme_mod( 'eduhub_display_sub_heading' ) == 1 ) {
-		return true;
-	}
-
-	return false;
-}

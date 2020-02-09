@@ -17,7 +17,6 @@ body {
     margin: 0;
     -webkit-font-smoothing: auto;
 }
-
 article,
 aside,
 details,
@@ -32,7 +31,6 @@ section,
 summary {
     display: block;
 }
-
 audio,
 canvas,
 progress,
@@ -40,39 +38,31 @@ video {
     display: inline-block;
     vertical-align: baseline;
 }
-
 audio:not([controls]) {
     display: none;
     height: 0;
 }
-
 [hidden],
 template {
     display: none;
 }
-
 a {
     background-color: transparent;
 }
-
 a:active,
 a:hover {
     outline: 0;
 }
-
 dfn {
     font-style: italic;
 }
-
 mark {
     background: #ff0;
     color: #000;
 }
-
 small {
     font-size: 80%;
 }
-
 sub,
 sup {
     font-size: 75%;
@@ -80,41 +70,32 @@ sup {
     position: relative;
     vertical-align: baseline;
 }
-
 sup {
     top: -0.5em;
 }
-
 sub {
     bottom: -0.25em;
 }
-
 img {
     border: 0;
 }
-
 svg:not(:root) {
     overflow: hidden;
 }
-
 figure {
     margin: 1em 2.5rem;
 }
-
 hr {
     box-sizing: content-box;
     height: 0;
 }
-
 button {
     overflow: visible;
 }
-
 button,
 select {
     text-transform: none;
 }
-
 button,
 html input[type="button"],
 input[type="reset"],
@@ -122,62 +103,50 @@ input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
 }
-
 button[disabled],
 html input[disabled] {
     cursor: default;
 }
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
-
 input {
     line-height: normal;
 }
-
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
 }
-
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
-
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
-
 fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
-
 legend {
     border: 0;
     padding: 0;
 }
-
 textarea {
     overflow: auto;
 }
-
 optgroup {
     font-weight: bold;
 }
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 td,
 th {
     padding: 0;
@@ -189,9 +158,7 @@ Copyright
     font-size: 17px;
     color: #fff;
     font-family: Segoe UI Symbol;
-    
 }
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -200,9 +167,7 @@ Copyright
     font-size: 40px;
     font-weight: bold;
 }
-
 .search {}
-
 /*-------------------------------
 contact form section custom css 
 -----------------------------------*/
@@ -215,7 +180,6 @@ contact form section custom css
     font-weight: bold;
     font-size: 20px;
 }
-
 .wpcf7-form-control {
     height: 43px;
     display: block;
@@ -235,21 +199,16 @@ contact form section custom css
     -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-
 }
-
 .wpcf7-textarea {
     height: 200px;
     width: 170%;
 }
-
 @media only screen and (max-width:620px) {
     .wpcf7-form-control {
         width: 100%;
     }
-
 }
-
 .wpcf7-submit {
     width: 40%;
     height: 60px;
@@ -257,61 +216,46 @@ contact form section custom css
     font-weight: bold;
     color: #fff;
     font-size: 20px;
-
 }
-
 .wpcf7-form > p > label {
     color: black;
     font-size: 18px;
 }
-
 /*--------------------------------------
 contact form section custom css  end 
 ----------------------------------------*/
-
 .sheading {
     font-size: 40px;
     font-weight: bold;
 }
-
-
 .picon::before {
     font-size: 60px;
-
 }
-
 .heading-section > .subheading {
     font-size: 25px;
 }
-
 /*
 --------------------------------
  comments section custom css 
 ------------------------------------*/
-
 /*coment form*/
 .comment-form-wrap {
     background: #F8F9FA;
 }
-
 .comment-form-wrap > h3 {
     padding-left: 10px;
 }
-
 .comment-reply-title {
     padding-left: 10px;
 }
-
 .comment-form-comment textarea {
     overflow: auto;
     width: 100%;
     border-radius: 20px;
 }
-
 .comment-form p {
     padding: 3%;
 }
-
 .comment-form-author > input {
     padding: 15px;
     line-height: normal;
@@ -319,11 +263,9 @@ contact form section custom css  end
     width: 100%;
     box-shadow: inset 0px 0px 1px 1px white;
 }
-
 .comment-form-author > level {
     font-size: 20px;
 }
-
 .comment-form-email > input {
     padding: 15px;
     line-height: normal;
@@ -331,11 +273,9 @@ contact form section custom css  end
     width: 100%;
     box-shadow: inset 0px 0px 1px 1px white;
 }
-
 .comment-notes #email-notes {
     padding-left: 10px;
 }
-
 .comment-form-url > input {
     padding: 15px;
     line-height: normal;
@@ -343,7 +283,6 @@ contact form section custom css  end
     width: 100%;
     box-shadow: inset 0px 0px 1px 1px white;
 }
-
 .form-submit .submit {
     background: #007bff;
     color: #fff;
@@ -353,10 +292,8 @@ contact form section custom css  end
     border-radius: 20px;
     padding: 10px;
 }
-
 /*Comment list*/
 @media only screen and (max-width:620px) {
-
     /* For mobile phones: */
     .comment-list li .comment-body .reply {
         background: #E3E3E3;
@@ -365,7 +302,6 @@ contact form section custom css  end
         border-radius: 20px;
     }
 }
-
 @media only screen and (min-width:620px) {
     .comment-list li .comment-body .reply {
         padding: 5px 10px;
@@ -378,33 +314,26 @@ contact form section custom css  end
         text-align: center;
     }
 }
-
 .comment-list li .comment-body .reply a {
     color: black;
 }
-
 .comment-list li .comment-body .reply:hover {
     background: #c2c2c2;
 }
-
 .comment-content {
     text-align: left;
     color: black;
     margin-right: 20px;
     padding: 20px;
 }
-
 .comment-author {
     margin-right: 20px;
     padding: 20px;
 }
-
 .comment-metadata {
     margin-right: 20px;
     padding: 20px;
 }
-
-
 /*-------------------
 search form
 -----------------------*/
@@ -413,55 +342,43 @@ search form
     padding-top: 30px;
     margin-bottom: 30px;
 }
-
 .single-page {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 .margin-top {
     margin-top: 100px;
 }
-
 .search-highlight {
     background-color: #ff0;
     font-weight: bold;
 }
-
 .header__search-form .hide-content {
     position: absolute;
     left: -9999px;
 }
-
 .h-entry > p {
     text-align: justify;
 }
-
 /*------------------------*/
 /*bradcumbs*/
 /*---------------------------*/
-
 .breadcrumb {
     background-color: transparent;
     color: #f1f1f1;
     text-align: center;
     margin-left: 35%;
 }
-
 .breadcrumb a {
-
     color: #fff;
     text-align: center;
 }
-
 .breadcrumb li {
     padding: 10px;
 }
-
 .breadcrumb li:not(:last-child):after {
     content: ' \003E';
 }
-
 .jcategory {
     text-align: center;
     font-size: 20px;
@@ -469,7 +386,6 @@ search form
     color: #fff;
     padding: 10px;
 }
-
 .jarchive {
     text-align: center;
     font-size: 20px;
@@ -477,38 +393,30 @@ search form
     color: #fff;
     padding: 10px;
 }
-
 @media only screen and (max-width:620px) {
     .breadcrumb {
         margin-left: 10%;
-
     }
-
     .jurist-newsletter {
         margin-left: 10%;
     }
 }
-
 /*
 -------------
 cusom css
 --------------*/
-
 @media only screen and (min-width:720px) {
     #ftco-navbar {
         height: 80px;
     }
-
     .ftco-section {
         padding: 4em 0;
     }
 }
-
 @media only screen and (max-width:720px) {
     .social-topbar {
         display: none;
     }
-
     .breadcrumb {
         margin-left: 20%;
     }
@@ -516,11 +424,9 @@ cusom css
         padding-left: 5%;
     }
 }
-
 .social-icon {
     height: 45px;
 }
-
 /*___________
 About Section
 ------------*/
@@ -528,40 +434,29 @@ About Section
     font-size: 20px;
     font-weight: bold;
 }
-
-
 #icon {
     color: #fff;
 }
-
-
 /*--------------------
 Blog Section
 ----------------*/
 .blog-section {
-
     padding-top: 50px;
 }
-
 .blog-box {
-
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-top: 30px;
     background-color: #fff;
-
 }
-
 .read-more {
     position: relative;
     bottom: 0px;
 }
-
 .readmore {
     font-size: 16px;
     padding: 5px font-weight: bold;
 }
-
 /*---------------
 Apply Now
 ------------------*/
@@ -569,49 +464,30 @@ Apply Now
     font-size: 50px;
     font-weight: bold;
 }
-
-
 /*-----------
 client-area
 ----------------*/
-
 .client-area .owl-carousel .owl-item img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     width: auto;
 }
-
-
 /*------------
 footer list Style
 ---------------*/
 .ftco-footer ul{
     padding: 0px;
 }
-
 .ftco-footer li{
     list-style: none;
 }
-
 /*----------------
 FAQ Section
 --------------*/
-
-
-@import url('https://fonts.googleapis.com/css?family=Oswald:500,600,700|Roboto');
-
-
-.section-faq.container {
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 70px 0 20px;
-    width: 100%;
-}
-
-.acc h3 {
+.acc> h3 {
     font-size: 25px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.7);
     color: #fff;
     padding: 15px;
     margin: 0;
@@ -619,9 +495,10 @@ FAQ Section
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     position: relative;
+	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+	
 }
-
-.acc h3:after {
+.acc> h3:after {
     content: '+';
     position: absolute;
     right: 20px;
@@ -629,28 +506,70 @@ FAQ Section
     top: 50%;
     transform: translateY(-50%);
 }
-
-.acc.active h3:after {
+.acc.active >h3:after {
 	content: '-';
 }
-
 .content {
     background-color: #fff;
     display: none;
 }
-
 .content-inner {
     padding: 15px;
+	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+	border: 1px solid #000;
+	
 }
-
 .content * {
     margin-top: 0;
     line-height: 1.5;
 }
-
 .acc {
     border-bottom: 1px solid #fff;
 }
+
+/*
+testimony-section*/
+@media only screen and (min-width:720px) {
+ .testimony-hight{
+	height: 150px;
+	
+}
+}
+/*
+--------------
+Button CSS
+---------------*/
+
+.apply-button{
+	border-radius: 20px;
+	background: #fda638;
+	margin-top: 20px;
+	padding: 5px;
+	
+}
+
+.apply-button a{
+	color: blue;
+	font-size: 20px;
+}
+
+.apply-button:hover{
+	
+	background-color: #000;
+}
+.apply-button a:hover{
+	
+	color: #fff;
+}
+
+
+
+
+
+
+
+
 
 
 
