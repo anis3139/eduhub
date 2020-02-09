@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="row col-md-12 wrap-about py-5 pr-md-4 ftco-animate">
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-10 offset-md-1  text-center heading-section ftco-animate">
                     <h2 class="mb-4 text-center" id="eduhub-about-heading"><?php echo esc_html(get_theme_mod('eduhub_about_heading',__('Why We Are The Best','eduhub')));?></h2>
                     <p class="text-center" id="eduhub-about-sheading"><?php echo esc_html(get_theme_mod('eduhub_about_sub_heading'));?></p>
                 </div>

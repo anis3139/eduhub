@@ -13,6 +13,7 @@
 <?php get_template_part("/page-templates/template-parts/testimonials")?>
 <?php get_template_part("/page-templates/template-parts/blog")?>
 <?php get_template_part("/page-templates/common/partner")?>
+<?php get_template_part("/page-templates/common/faq")?>
 <?php get_template_part("/page-templates/common/apply-now")?>
 
 

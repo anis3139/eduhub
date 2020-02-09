@@ -9015,6 +9015,7 @@ textarea.form-control {
   display: inline-block; }
   .ftco-footer-social li a {
     height: 40px;
+      color:#fff;
     width: 40px;
     display: block;
     float: left;
@@ -9030,10 +9031,12 @@ textarea.form-control {
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
     .ftco-footer-social li a:hover {
-      color: #fff; }
+      color: blue; }
 
 .footer-small-nav > li {
-  display: inline-block; }
+  display: inline-block; 
+  list-style: none;
+}
   .footer-small-nav > li a {
     margin: 0 10px 10px 0; }
     .footer-small-nav > li a:hover, .footer-small-nav > li a:focus {

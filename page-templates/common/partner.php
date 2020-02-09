@@ -2,7 +2,7 @@
  <section class="ftco-section">
      <div class="container">
          <div class="row">
-             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  text-center heading-section ftco-animate">
                  <h2 class="mb-4 text-center mb-3" id="eduhub-partners-heading"><?php echo esc_html(get_theme_mod('eduhub_partners_heading',__('Add Partner Images','eduhub')));?></h2>
                  <p class=" mb-4 text-center mb-5" id="eduhub-partners-section-desc"><?php echo esc_html(get_theme_mod('eduhub_partners_description'));?></p>
              </div>

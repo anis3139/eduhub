@@ -105,6 +105,7 @@ function eduhub_assets(){
     wp_enqueue_script('scrollax-js',get_theme_file_uri('/assets/js/scrollax.min.js'),['jquery'],VERSION,true);   
       wp_enqueue_script('google-map-js',get_theme_file_uri('/assets/js/google-map.js'),['jquery'],VERSION,true);   
     wp_enqueue_script('googlemap-js',get_theme_file_uri('//maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false'),['jquery'],VERSION,true);       
+    wp_enqueue_script('faq-js',get_theme_file_uri('/assets/js/faq.js'),['jquery'],VERSION,true);
     wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),['jquery'],VERSION,true);
    
 }
