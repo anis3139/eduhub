@@ -1,9 +1,16 @@
 <?php get_header();?>
 <?php get_template_part("/page-templates/template-parts/menu")?>
-<?php get_template_part("/page-templates/common/hero-blog")?>
 
 
-
+<section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo get_template_directory_uri()?>./assets/images/computer-search.jpg');">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+                <h1 class="search text-danger font-weight-bold"><?php _e('Search Results...','eduhub');?></h1>
+            </div>
+        </div>
+    </div>
+</section>
 <section <?php post_class();?> class="ftco-section bg-light">
     <div class="container">
         <div class="text-center mt-3">

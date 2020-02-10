@@ -91,12 +91,35 @@ function eduhub_assets(){
 	wp_enqueue_style('eduhub-css',get_stylesheet_uri(),null,VERSION);
     $heading_icon_color = get_theme_mod( 'eduhub_heading_color', '#dd2d6a' );
     $heading_title_color = get_theme_mod( 'eduhub_title_color', '#dd2d6a' );
+    $heading_sub_title_color = get_theme_mod( 'eduhub_sub_title_color', '#000' );
+    $heading_button_color = get_theme_mod( 'eduhub_button_color', '#fff' );
+    $heading_button_bg_color = get_theme_mod( 'eduhub_button_bg_color', '#fda638' );
+    $about_section_icon_bg = get_theme_mod( 'eduhub_about_section_bg', '#1EAAF1' );
 	$heading_style      = <<<EOD
  .heading-section h2 {
     color: {$heading_icon_color};
 }
-.slider-text h1{
+.owl-carousel.home-slider .slider-item .slider-text h1{
     color: {$heading_title_color};
+}
+.owl-carousel.home-slider .slider-item .slider-text p{
+    color: {$heading_sub_title_color};
+}
+ .btn.btn-secondary{
+    color: {$heading_button_color};
+} 
+.btn.btn-secondary{
+    background: {$heading_button_bg_color};
+    border: {$heading_button_bg_color};
+	
+}
+.btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {
+    border: {$heading_button_bg_color};
+	 color: {$heading_button_color};
+}
+.services-2 .icon{
+    background: {$about_section_icon_bg};
+	 color: {};
 }
 EOD;
 

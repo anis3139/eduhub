@@ -871,9 +871,59 @@ why we are
 	) );
 
 	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_title_color_control', array(
-		'label'    => __( 'Title Control', 'eduhub' ),
+		'label'    => __( 'Title Color', 'eduhub' ),
 		'section'  => 'eduhub_heading_color_section',
 		'settings' => 'eduhub_title_color'
+	) ) );
+    
+    $wp_eduhub->add_setting( 'eduhub_sub_title_color', array(
+		'default'   => '#000',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_sub_title_color_control', array(
+		'label'    => __( 'Sub Title Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_sub_title_color'
+	) ) );  
+	
+	
+	
+    $wp_eduhub->add_setting( 'eduhub_button_color', array(
+		'default'   => '#000',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_button_color_control', array(
+		'label'    => __( 'Button Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_button_color'
+	) ) );
+    
+    	
+	
+    $wp_eduhub->add_setting( 'eduhub_button_bg_color', array(
+		'default'   => '#fda638',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_button_bg_color_control', array(
+		'label'    => __( 'Button Background Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_button_bg_color'
+	) ) );
+    
+        	
+	
+    $wp_eduhub->add_setting( 'eduhub_about_section_bg', array(
+		'default'   => '#1EAAF1',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_about_section_color_control', array(
+		'label'    => __( 'About Section Icon', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_about_section_bg'
 	) ) );
     
     	

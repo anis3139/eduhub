@@ -281,13 +281,55 @@
     })	 
 	wp.customize('eduhub_title_color',function(value){
         value.bind(function(newvalue){
-            $(".slider-text h1").css("color",newvalue);
+            $(".owl-carousel.home-slider .slider-item .slider-text h1").css("color",newvalue);
         });
     })	 
 	
-
+	wp.customize('eduhub_sub_title_color',function(value){
+        value.bind(function(newvalue){
+            $(".owl-carousel.home-slider .slider-item .slider-text p").css("color",newvalue);
+        });
+    })	 
 	
+/*Button Color*/
+		
+	wp.customize('eduhub_button_color',function(value){
+        value.bind(function(newvalue){
+            $(".btn.btn-secondary").css("color",newvalue);
+        });
+    })	 
 	
+		
+	wp.customize('eduhub_button_bg_color',function(value){
+        value.bind(function(newvalue){
+            $(".btn.btn-secondary").css("background",newvalue);
+        });
+    })	 
+	
+	wp.customize('eduhub_button_bg_color',function(value){
+        value.bind(function(newvalue){
+            $(".btn.btn-secondary").css("border",newvalue);
+        });
+    })	 
+	
+	wp.customize('eduhub_button_bg_color',function(value){
+        value.bind(function(newvalue){
+            $(".btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active ").css("border",newvalue);
+        });
+    })	 
+	wp.customize('eduhub_button_bg_color',function(value){
+        value.bind(function(newvalue){
+            $(".btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active ").css("color",newvalue);
+        });
+    })	 
+	
+/*About Section Color*/
+	
+	wp.customize('eduhub_about_section_bg',function(value){
+        value.bind(function(newvalue){
+            $(".services-2 .icon").css("background",newvalue);
+        });
+    })	
 	
 	
 	
