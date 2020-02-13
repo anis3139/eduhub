@@ -2,6 +2,7 @@
 require_once( get_theme_file_path("/lib/tgm-plugin/class-tgm-plugin-activation.php") );
 require_once( get_theme_file_path("/inc/tgm.php") );
 require_once( get_theme_file_path("/inc/customizer.php") );
+require_once( get_theme_file_path("/inc/customizer-about.php") );
 require_once( get_theme_file_path( "/lib/companion/companion-plugin.php" ) );
 require_once( get_theme_file_path( "/lib/csf/cs-framework.php" ) );
 require_once( get_theme_file_path( "/inc/mj-wp-breadcrumb/mj-wp-breadcrumb.php" ) );
@@ -51,8 +52,8 @@ function eduhub_theme_setup() {
 		'comment-list',
 	) );
     $eduhub_custom_logo_defaults = array(
-        "width"  => '90px',
-        "height" => '90px'
+        "width"  => '170px',
+        "height" => '120px',
     );
     add_theme_support( "custom-logo", $eduhub_custom_logo_defaults );
 	add_theme_support( 'custom-background', apply_filters( 'eduhub_custom_background_args', array(
@@ -152,7 +153,11 @@ EOD;
 add_action('wp_enqueue_scripts','eduhub_assets');
 
 function eduhub_customizer_assets() {
-	wp_enqueue_script( "cust-customizer-js", get_theme_file_uri( "/assets/js/customizer.js" ), array(
+	wp_enqueue_script( "eduhub-customizer-js", get_theme_file_uri( "/assets/js/customizer.js" ), array(
+		'jquery',
+		'customize-preview'
+	), time(), true );
+	wp_enqueue_script( "eduhub-customizer-about-js", get_theme_file_uri( "/assets/js/customizer-about.js" ), array(
 		'jquery',
 		'customize-preview'
 	), time(), true );

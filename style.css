@@ -401,32 +401,25 @@ search form
         margin-left: 10%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 -------------
 cusom css
 --------------*/
-@media only screen and (min-width:720px) {
-    #ftco-navbar {
-        height: 80px;
-    }
-    .ftco-section {
-        padding: 4em 0;
-    }
-}
-@media only screen and (max-width:720px) {
-    .social-topbar {
-        display: none;
-    }
-    .breadcrumb {
-        margin-left: 20%;
-    }
-    .about-1{
-        padding-left: 5%;
-    }
-}
-.social-icon {
-    height: 45px;
-}
+
+
 /*___________
 About Section
 ------------*/
@@ -564,8 +557,65 @@ Button CSS
 }
 
 
+/*-------------
+logo
+-----------*/
+@media only screen and (min-width:720px) {
+    #ftco-navbar {
+        height: 80px;
+    }
+    .ftco-section {
+        padding: 4em 0;
+    }
+}
+@media only screen and (max-width:720px) {
+    .social-icon {
+        display: none;
+    }
+    .breadcrumb {
+        margin-left: 20%;
+    }
+    .about-1{
+        padding-left: 5%;
+    }
+}
+
+.social-icon {
+    height: 80px;
+
+}
+.social-topbar{
+	height: 80px;
+}
 
 
+.navbar{
+	height: 120px;
+}
+.logo img{
+	padding:25px 0px;
+}
+
+/*---------------------
+About Page
+-------------*/
+
+
+#eduhub-about-featured-image img{
+	width: 100%;
+	height: auto;
+}
+
+.our-history hr{
+	
+	
+	
+}
+
+.about-underline{
+	border: 1px solid blue;
+	width: 30%;
+}
 
 
 

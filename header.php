@@ -8,7 +8,7 @@
     <?php wp_head();?>
 </head>
 <body<?php body_class();?>>
-    <div class=" bg-dark text-light social-topbar">
+    <div class="bg-danger text-light social-topbar">
         <div class="container etopbar social-topbar">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-lg-12 d-block">
