@@ -10,9 +10,9 @@
 
  while ( $eduhub_sliders_posts->have_posts() ):
      $eduhub_sliders_posts->the_post();
-$eduhub_gallery_iamge_large=get_the_post_thumbnail_url(null, "full");
+$eduhub_slider_iamge=get_the_post_thumbnail_url(null, "full");
     ?>
-      <div class="slider-item" style="background-image:url(<?php echo esc_url($eduhub_gallery_iamge_large);?>);">
+      <div class="slider-item" style="background-image:url(<?php echo esc_url($eduhub_slider_iamge);?>);">
       	<div class="overlay"></div>
         <div class="container">
          

@@ -1,4 +1,4 @@
-<section id="apply-now-image" class="ftco-intro" style="background-image: url(<?php echo esc_url(get_theme_mod('eduhub_apply_now_image'));?>);" data-stellar-background-ratio="0.5">
+<section id="apply-now-image" class="ftco-intro mt-5" style="background-image: url(<?php echo esc_url(get_theme_mod('eduhub_apply_now_image'));?>);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">

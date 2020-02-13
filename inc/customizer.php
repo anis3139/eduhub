@@ -2,13 +2,14 @@
 
 function eduhub_customizer_settings( $wp_eduhub ) {
  
- 
-  /**
-	 * Front Page Settings
+   /**
+	 * Topbar Settings
 	 */
     
-	$wp_eduhub->add_section( 'eduhub_front_page', array(
-		'title'           => __( 'Front Page Settings', 'eduhub' ),
+	
+	
+	$wp_eduhub->add_section( 'eduhub_topbar', array(
+		'title'           => __( 'Topbar Settings', 'eduhub' ),
 		'priority'        => '40',
 		'active_callback' => function () {
 			if(is_page_template('page-templates/landing.php')){
@@ -19,15 +20,15 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 			return is_page_template( 'page-templates/landing.php' );
 		}
 	) );
-     
-    $wp_eduhub->add_setting( 'eduhub_mobile', array(
+	
+	  $wp_eduhub->add_setting( 'eduhub_mobile', array(
 		'default'   => "008801816366535",
 		'transport' => 'postMessage',
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_mobile', array(
 		'label'    => __( 'Phone', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar',
 		'type'     => 'text',
 
 	) );
@@ -49,7 +50,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_mail', array(
 		'label'    => __( 'Email', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar',
 		'type'     => 'text',
 
 	) );
@@ -72,7 +73,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	$wp_eduhub->add_control( 'jsocial_link_facebook', 
         array(
 		'label'    => __( 'Facebook Link', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar',
 		'type'     => 'url',
 
 	) );
@@ -87,7 +88,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	$wp_eduhub->add_control( 'jsocial_link_twitter', 
         array(
 		'label'    => __( 'Twitter Link', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar',
 		'type'     => 'url',
 
 	) );
@@ -101,7 +102,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	$wp_eduhub->add_control( 'jsocial_link_instagram', 
         array(
 		'label'    => __( 'Instagram Link', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar',
 		'type'     => 'url',
 
 	) );
@@ -118,7 +119,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	$wp_eduhub->add_control( 'jsocial_link_youtube', 
         array(
 		'label'    => __( 'Youtube Link', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar',
 		'type'     => 'url',
 
 	) );
@@ -131,9 +132,32 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 			return get_theme_mod('jsocial_link_youtube');
 		}
 	));
-       
+      
+	
+	
     
-    /*featured post*/
+	
+	
+	
+   
+    /**
+	 * Featured Post Settings
+	 */
+    
+	$wp_eduhub->add_section( 'eduhub_topbar_page', array(
+		'title'           => __( 'Featured Posts Settings', 'eduhub' ),
+		'priority'        => '40',
+		'active_callback' => function () {
+			if(is_page_template('page-templates/landing.php')){
+				return true;
+			}
+			return false;
+
+			return is_page_template( 'page-templates/landing.php' );
+		}
+	) );
+     
+   
     
     
     $wp_eduhub->add_setting( 'eduhub_featured_post_icon_one', array(
@@ -143,7 +167,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_one', array(
 		'label'    => __( 'Featured Post Icon One', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
         'choices' => array(
@@ -160,7 +184,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
     
         
     $wp_eduhub->selective_refresh->add_partial('eduhub_featured_post_icon_one',array(
-		'selector'=>'#eduhub-featured-con-one',
+		'selector'=>'#eduhub-featured-icon-one',
 		'settings'=>'eduhub_featured_post_icon_one',
 		'render_callback'=>function(){
 			return get_theme_mod('eduhub_featured_post_icon_one');
@@ -177,7 +201,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_one', array(
 		'label'    => __( 'Heading One', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -189,7 +213,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_one', array(
 		'label'    => __( 'Description One', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
@@ -203,7 +227,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_two', array(
 		'label'    => __( 'Featured Post Icon Two', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
          'choices' => array(
@@ -237,7 +261,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_two', array(
 		'label'    => __( 'Heading Two', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -249,7 +273,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_two', array(
 		'label'    => __( 'Description Two', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
@@ -265,7 +289,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_three', array(
 		'label'    => __( 'Featured Post Icon Three', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
        'choices' => array(
@@ -300,7 +324,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_three', array(
 		'label'    => __( 'Heading Three', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -312,7 +336,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_three', array(
 		'label'    => __( 'Description Three', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
@@ -327,7 +351,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_four', array(
 		'label'    => __( 'Featured Post Icon Four', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
         'choices' => array(
@@ -362,7 +386,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_four', array(
 		'label'    => __( 'Heading Four', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -374,12 +398,33 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_four', array(
 		'label'    => __( 'Description Four', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_topbar_page',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
  
     
+	
+	
+
+  /**
+	 * Front Page Settings
+	 */
+    
+	$wp_eduhub->add_section( 'eduhub_front_page', array(
+		'title'           => __( 'Front Page Settings', 'eduhub' ),
+		'priority'        => '40',
+		'active_callback' => function () {
+			if(is_page_template('page-templates/landing.php')){
+				return true;
+			}
+			return false;
+
+			return is_page_template( 'page-templates/landing.php' );
+		}
+	) );
+     
+   
     
    /* About Section*/
     
@@ -832,118 +877,7 @@ why we are
 		'type'     => 'textarea',
 	) );
     
-	
-	
-	/*----------------
-	Color Control
-	-----------------*/
-	
-	 $wp_eduhub->add_section( 'eduhub_heading_color_section', array(
-		'title'           => __( 'Front Page Color Control', 'eduhub' ),
-		'priority'        => '40',
-		'active_callback' => function () {
-			if(is_page_template('page-templates/landing.php')){
-				return true;
-			}
-			return false;
-
-			return is_page_template( 'page-templates/landing.php' );
-		}
-	) );
-	
-    
-    $wp_eduhub->add_setting( 'eduhub_heading_color', array(
-		'default'   => '#fda638',
-		'transport' => 'postMessage'
-	) );
-
-	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_heading_color_control', array(
-		'label'    => __( 'Header Color Control', 'eduhub' ),
-		'section'  => 'eduhub_heading_color_section',
-		'settings' => 'eduhub_heading_color'
-	) ) );
-    
-    	
-   
-    $wp_eduhub->add_setting( 'eduhub_title_color', array(
-		'default'   => '#fda638',
-		'transport' => 'postMessage'
-	) );
-
-	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_title_color_control', array(
-		'label'    => __( 'Title Color', 'eduhub' ),
-		'section'  => 'eduhub_heading_color_section',
-		'settings' => 'eduhub_title_color'
-	) ) );
-    
-    $wp_eduhub->add_setting( 'eduhub_sub_title_color', array(
-		'default'   => '#000',
-		'transport' => 'postMessage'
-	) );
-
-	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_sub_title_color_control', array(
-		'label'    => __( 'Sub Title Color', 'eduhub' ),
-		'section'  => 'eduhub_heading_color_section',
-		'settings' => 'eduhub_sub_title_color'
-	) ) );  
-	
-	
-	
-    $wp_eduhub->add_setting( 'eduhub_button_color', array(
-		'default'   => '#000',
-		'transport' => 'postMessage'
-	) );
-
-	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_button_color_control', array(
-		'label'    => __( 'Button Color', 'eduhub' ),
-		'section'  => 'eduhub_heading_color_section',
-		'settings' => 'eduhub_button_color'
-	) ) );
-    
-    	
-	
-    $wp_eduhub->add_setting( 'eduhub_button_bg_color', array(
-		'default'   => '#fda638',
-		'transport' => 'postMessage'
-	) );
-
-	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_button_bg_color_control', array(
-		'label'    => __( 'Button Background Color', 'eduhub' ),
-		'section'  => 'eduhub_heading_color_section',
-		'settings' => 'eduhub_button_bg_color'
-	) ) );
-    
-        	
-	
-    $wp_eduhub->add_setting( 'eduhub_about_section_bg', array(
-		'default'   => '#1EAAF1',
-		'transport' => 'postMessage'
-	) );
-
-	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_about_section_color_control', array(
-		'label'    => __( 'About Section Icon', 'eduhub' ),
-		'section'  => 'eduhub_heading_color_section',
-		'settings' => 'eduhub_about_section_bg'
-	) ) );
-    
-    	
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+	    
     
     
     
@@ -1250,6 +1184,127 @@ why we are
 	);
     
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*----------------
+	Color Control
+	-----------------*/
+	
+	 $wp_eduhub->add_section( 'eduhub_heading_color_section', array(
+		'title'           => __( 'Front Page Color Control', 'eduhub' ),
+		'priority'        => '40',
+		'active_callback' => function () {
+			if(is_page_template('page-templates/landing.php')){
+				return true;
+			}
+			return false;
+
+			return is_page_template( 'page-templates/landing.php' );
+		}
+	) );
+	
+    
+    $wp_eduhub->add_setting( 'eduhub_heading_color', array(
+		'default'   => '#fda638',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_heading_color_control', array(
+		'label'    => __( 'Header Color Control', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_heading_color'
+	) ) );
+    
+    	
+   
+    $wp_eduhub->add_setting( 'eduhub_title_color', array(
+		'default'   => '#fda638',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_title_color_control', array(
+		'label'    => __( 'Title Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_title_color'
+	) ) );
+    
+    $wp_eduhub->add_setting( 'eduhub_sub_title_color', array(
+		'default'   => '#000',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_sub_title_color_control', array(
+		'label'    => __( 'Sub Title Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_sub_title_color'
+	) ) );  
+	
+	
+	
+    $wp_eduhub->add_setting( 'eduhub_button_color', array(
+		'default'   => '#000',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_button_color_control', array(
+		'label'    => __( 'Button Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_button_color'
+	) ) );
+    
+    	
+	
+    $wp_eduhub->add_setting( 'eduhub_button_bg_color', array(
+		'default'   => '#fda638',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_button_bg_color_control', array(
+		'label'    => __( 'Button Background Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_button_bg_color'
+	) ) );
+    
+        	
+	
+    $wp_eduhub->add_setting( 'eduhub_about_section_bg', array(
+		'default'   => '#1EAAF1',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_about_section_color_control', array(
+		'label'    => __( 'About Section Icon', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_about_section_bg'
+	) ) );
+    
+    	
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
   
     
     

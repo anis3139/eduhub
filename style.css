@@ -183,7 +183,7 @@ contact form section custom css
 .wpcf7-form-control {
     height: 43px;
     display: block;
-    width: 170%;
+    width: 100%;
     height: calc(2.25rem + 20px);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -202,7 +202,7 @@ contact form section custom css
 }
 .wpcf7-textarea {
     height: 200px;
-    width: 170%;
+    width: 100%;
 }
 @media only screen and (max-width:620px) {
     .wpcf7-form-control {
@@ -212,7 +212,7 @@ contact form section custom css
 .wpcf7-submit {
     width: 40%;
     height: 60px;
-    background-color: #83B582;
+    background-color: #1EAAF1;
     font-weight: bold;
     color: #fff;
     font-size: 20px;
@@ -401,25 +401,10 @@ search form
         margin-left: 10%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 -------------
 cusom css
 --------------*/
-
-
 /*___________
 About Section
 ------------*/
@@ -480,16 +465,15 @@ FAQ Section
 --------------*/
 .acc> h3 {
     font-size: 25px;
-    background-color: rgba(0,0,0,0.7);
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     padding: 15px;
     margin: 0;
     cursor: pointer;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     position: relative;
-	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
-	
+	box-shadow: 0px 0px 20px 2px #E9EBEC;
 }
 .acc> h3:after {
     content: '+';
@@ -508,10 +492,9 @@ FAQ Section
 }
 .content-inner {
     padding: 15px;
-	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 20px 2px #E9EBEC;
     background-color: #fff;
-	border: 1px solid #000;
-	
+	border: 1px solid #fff;
 }
 .content * {
     margin-top: 0;
@@ -520,43 +503,33 @@ FAQ Section
 .acc {
     border-bottom: 1px solid #fff;
 }
-
 /*
 testimony-section*/
 @media only screen and (min-width:720px) {
  .testimony-hight{
 	height: 150px;
-	
 }
 }
 /*
 --------------
 Button CSS
 ---------------*/
-
 .apply-button{
 	border-radius: 20px;
 	background: #fda638;
 	margin-top: 20px;
 	padding: 5px;
-	
 }
-
 .apply-button a{
 	color: blue;
 	font-size: 20px;
 }
-
 .apply-button:hover{
-	
 	background-color: #000;
 }
 .apply-button a:hover{
-	
 	color: #fff;
 }
-
-
 /*-------------
 logo
 -----------*/
@@ -579,48 +552,27 @@ logo
         padding-left: 5%;
     }
 }
-
 .social-icon {
     height: 80px;
-
 }
 .social-topbar{
 	height: 80px;
+	background: #E62B31;
 }
-
-
 .navbar{
-	height: 120px;
-}
-.logo img{
-	padding:25px 0px;
+	height: 150px;
 }
 
 /*---------------------
 About Page
 -------------*/
-
-
 #eduhub-about-featured-image img{
 	width: 100%;
 	height: auto;
 }
-
 .our-history hr{
-	
-	
-	
 }
-
 .about-underline{
 	border: 1px solid blue;
 	width: 30%;
 }
-
-
-
-
-
-
-
-

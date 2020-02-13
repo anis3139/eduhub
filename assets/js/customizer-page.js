@@ -23,9 +23,16 @@
         });
     }); 
 	
-	
-	
-	
+/*	
+----------------
+	Study Abroad
+	-------------*/
+		
+	 wp.customize('eduhub_study_abroad_description',function(value){
+        value.bind(function(newvalue){
+            $("#eduhub-study-abroad-description").html(newvalue);
+        });
+    });
 	
 	
 	

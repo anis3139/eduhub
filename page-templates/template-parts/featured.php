@@ -4,7 +4,7 @@
         <div class="row no-gutters">
             <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-white ">
                 <div class="media block-6 d-block text-center">
-                    <div class="icon d-flex justify-content-center align-items-center" id="eduhub-featured-con-one">
+                    <div class="icon d-flex justify-content-center align-items-center" id="eduhub-featured-icon-one">
                         <span class="<?php echo esc_attr(get_theme_mod('eduhub_featured_post_icon_one',__('flaticon-teacher','eduhub')));?>"></span>
                     </div>
                     <div class="media-body p-2 mt-3 text-dark">
