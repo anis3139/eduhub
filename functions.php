@@ -6,10 +6,9 @@ require_once( get_theme_file_path("/inc/customizer-page.php") );
 require_once( get_theme_file_path( "/lib/companion/companion-plugin.php" ) );
 require_once( get_theme_file_path( "/lib/csf/cs-framework.php" ) );
 require_once( get_theme_file_path( "/inc/mj-wp-breadcrumb/mj-wp-breadcrumb.php" ) );
-require_once( get_theme_file_path( "/inc/metaboxes/page-attorneys.php" ) );
-require_once( get_theme_file_path( "/inc/metaboxes/page-practice-.php" ) );
+require_once( get_theme_file_path( "/inc/metaboxes/study-abrad.php" ) );
 require_once( get_theme_file_path( "/inc/metaboxes/page-testimonials.php" ) );
-require_once( get_theme_file_path( "/inc/metaboxes/page-booking.php" ) );
+
 define( 'CS_ACTIVE_FRAMEWORK', false ); // default true
 define( 'CS_ACTIVE_METABOX', true ); // default true
 define( 'CS_ACTIVE_TAXONOMY', false ); // default true

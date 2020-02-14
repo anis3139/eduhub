@@ -213,7 +213,7 @@ function jurist_register_my_cpts_section() {
 		"query_var" => true,
 		"menu_position" => 20,
 		"menu_icon" => "dashicons-format-gallery",
-		"supports" => [ "thumbnail"],
+		"supports" => [ "title","thumbnail"],
         "taxonomies"=>array('category'),
 	];
 

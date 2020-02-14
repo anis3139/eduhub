@@ -191,7 +191,7 @@ function eduhub_about_us_customize_register($wp_eduhub){
 	$wp_eduhub->add_control(
 		new WP_Customize_Cropped_Image_Control(
 			$wp_eduhub,
-			'eduhub_about_featured_image',
+			'eduhub_study_abroad_image',
 			array(
 				'label'      => __( 'Upload About Featured Image', 'eduhub' ),
 				'section'    => 'eduhub_study_abroad',
