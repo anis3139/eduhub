@@ -12,16 +12,19 @@
 
 
 
+<?php
+ $eduhub_apply_image_id =get_theme_mod("eduhub_apply_image","full");
+?>
 
-
-<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb mt-5 mb-5" style="background-image: url(<?php echo get_template_directory_uri()?>./assets/images//bg_5.jpg);" data-stellar-background-ratio="0.5">
-	<div class="container">
-		<div class="row justify-content-end">
-			<div class="col-md-6 py-5 px-md-5 bg-primary">
-				<div class="heading-section heading-section-white ftco-animate mb-5">
-					<h2 class="mb-4">Request A Quote</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<section id="eduhub-apply-image" class="ftco-section ftco-consult ftco-no-pt ftco-no-pb mt-5 mb-5" style="background-image: url(<?php echo esc_url($eduhub_apply_image_id);?>);" data-stellar-background-ratio="0.5">
+	
+		<div class="row justify-content-between">
+			
+				<div class="col-md-6 apply-now-left heading-section heading-section-white ftco-animate  mb-5">
+					<h2 class="mb-3" id="eduhub-apply-heading"><?php echo esc_html(get_theme_mod('eduhub_apply_heading',__('Interested in studying abroad with Gratuate Track?','eduhub')));?></h2>
+					<p id="eduhub-apply-sub-heading"><?php echo esc_html(get_theme_mod('eduhub_apply_sub_heading',__('Enter your details and we will call you back when it suits you.','eduhub')));?></p>
 				</div>
+				<div class="col-md-6 p-5 px-md-5 apply-now-right">
 				<form action="#" class="appointment-form ftco-animate">
 				<?php
 					wp_nonce_field('reservation','rn');
@@ -61,13 +64,13 @@
 					</div>
 					<div class="d-md-flex mt-3">
 						<div class="form-group ml-md-4">
-							<input type="submit" id="reservenow" value="Request A Quote" class="btn btn-secondary py-3 px-4">
+							<input type="submit" id="reservenow" value="Apply Now" class="btn btn-secondary  py-3 px-4">
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-	</div>
+	
 </section>
 
 

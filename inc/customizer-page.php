@@ -348,15 +348,82 @@ function eduhub_about_us_customize_register($wp_eduhub){
     
     
     
+       /**
+	 * Contact Pages Settings
+	 */
+
+	$wp_eduhub->add_section( 'eduhub_apply_now_page', array(
+		'title'           => __( 'Contact Page setting', 'eduhub' ),
+		'priority'        => '40',
+	) );
     
+       $wp_eduhub->add_setting( 'eduhub_apply_heading', array(
+		'default'   => "Interested in studying abroad with Gratuate Track?",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_apply_heading', array(
+		'label'    => __( 'Apply Heading', 'eduhub' ),
+		'section'  => 'eduhub_apply_now_page',
+		'type'     => 'text',
+
+	) );
+    
+       
+	 $wp_eduhub->selective_refresh->add_partial('eduhub_apply_heading',array(
+		'selector'=>'#eduhub-apply-heading',
+		'settings'=>'eduhub_apply_heading',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_apply_heading');
+		}
+	));
+	
+	    $wp_eduhub->add_setting( 'eduhub_apply_sub_heading', array(
+		'default'   => "Enter your details and we will call you back when it suits you.",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_eduhub->add_control( 'eduhub_apply_sub_heading', array(
+		'label'    => __( 'Apply Sub Heading', 'eduhub' ),
+		'section'  => 'eduhub_apply_now_page',
+		'type'     => 'text',
+
+	) );
+    
+       
+	 $wp_eduhub->selective_refresh->add_partial('eduhub_apply_sub_heading',array(
+		'selector'=>'#eduhub-apply-sub-heading',
+		'settings'=>'eduhub_apply_sub_heading',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_apply_sub_heading');
+		}
+	));
 	
 	
+	 $wp_eduhub->add_setting( 'eduhub_apply_image', array(
+		'default'   => "Upload Image",
+		'transport' => 'refresh',
+	) );
+
+	$wp_eduhub->add_control(
+		new WP_Customize_Image_Control(
+			$wp_eduhub,
+			'$wp_eduhub',
+			array(
+				'label'      => __( 'Upload Apply Now Image', 'eduhub' ),
+				'section'    => 'eduhub_apply_now_page',
+				'settings'   => 'eduhub_apply_image',
+			)
+		)
+	);
 	
-	
-	
-	
-	
-	
+	 $wp_eduhub->selective_refresh->add_partial('eduhub_apply_image',array(
+		'selector'=>'#eduhub-apply-image',
+		'settings'=>'eduhub_apply_image',
+		'render_callback'=>function(){
+			return get_theme_mod('eduhub_apply_image');
+		}
+	));
 	
 }
 

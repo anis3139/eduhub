@@ -597,11 +597,57 @@ Apply Form
 	width: 40%;
 }
 
+.apply-now-left {
+    position: relative;
+    top: 40px;
+	left: 0px;
+	max-height: 200px;
+    max-width: 580px;
+    color: #FFF;
+    border-radius: 0 100px 100px 0;
+    background: linear-gradient(90deg, #2630a8 0%, #0086f8 100%);
+    padding: 25px 50px 28px;
+    width: 80%;
+    z-index: 1;
+	
+}
+.apply-now-right{
+	background: linear-gradient(90deg,  #0086f8  0%, #2630a8 100%);
+}
 
+.heading-section.heading-section-white h2 {
+    font-size: 32px;
+	line-height: 1.2em;
+}
+.heading-section.heading-section-white p {
+    font-size: 18px;
+	line-height: 1.2em;
+}
 
-
-
-
+@media only screen and (max-width:720px) {
+   .heading-section.heading-section-white h2 {
+    font-size: 20px;
+	line-height: 1.2em;
+}
+   .heading-section.heading-section-white p {
+    font-size: 12px;
+	line-height: 1.2em;
+}
+	.apply-now-left {
+    position: relative;
+    top: 40px;
+	left: 0px;
+	max-height: 200px;
+    max-width: 580px;
+    color: #FFF;
+    border-radius: 0 100px 100px 0;
+    background: linear-gradient(90deg, #2630a8 0%, #0086f8 100%);
+    padding: 25px 50px 28px;
+    width: 80%;
+    z-index: 1;
+	
+}
+}
 
 
 
