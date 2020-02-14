@@ -249,7 +249,7 @@ function jurist_register_my_cpts_section() {
 		"query_var" => true,
 		"menu_position" => 20,
 		"menu_icon" => "dashicons-book-alt",
-		"supports" => [ "title", "editor","thumbnail"],
+		"supports" => [ "title"],
         "taxonomies"=>array('category'),
 	];
 

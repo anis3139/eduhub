@@ -7,14 +7,14 @@
                 name:$("#name").val(),
                 email:$("#email").val(),
                 phone:$("#phone").val(),
-                persons:$("#persons").val(),
+                country:$("#country").val(),
                 rn:$("#rn").val()
             },function(data){
                 console.log(data);
                 if('Successful'==data){
-                    alert('Your reservation request has been placed');
+                    alert('Your Application Submitted');
                 }else if('Duplicate'==data){
-                    alert('You have already placed a request for this reservation. No need to submit again');
+                    alert('You have already placed a Application. No need to submit again.');
                 }
 
             });

@@ -576,3 +576,37 @@ About Page
 	border: 1px solid blue;
 	width: 30%;
 }
+
+
+/*
+-------------
+Apply Form
+---------------*/
+     select:required:invalid {
+      color: red;
+      }
+      option[value=""][disabled] {
+      display: none;
+      }
+      option {
+      color: #fff;
+      }
+
+
+#reservenow{
+	width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

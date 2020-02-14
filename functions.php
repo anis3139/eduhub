@@ -143,8 +143,8 @@ EOD;
     wp_enqueue_script('aos-js',get_theme_file_uri('/assets/js/aos.js'),['jquery'],VERSION,true); 
     wp_enqueue_script('animateNumber-js',get_theme_file_uri('/assets/js/jquery.animateNumber.min.js'),['jquery'],VERSION,true);
     wp_enqueue_script('scrollax-js',get_theme_file_uri('/assets/js/scrollax.min.js'),['jquery'],VERSION,true);   
-      wp_enqueue_script('google-map-js',get_theme_file_uri('/assets/js/google-map.js'),['jquery'],VERSION,true);   
-    wp_enqueue_script('googlemap-js',get_theme_file_uri('//maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false'),['jquery'],VERSION,true);       
+      
+          
     wp_enqueue_script('faq-js',get_theme_file_uri('/assets/js/faq.js'),['jquery'],VERSION,true);
     wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),['jquery'],VERSION,true);
 	
@@ -321,14 +321,14 @@ function eduhub_process_reservation() {
 	if ( check_ajax_referer( 'reservation', 'rn' ) ) {
 		$name    = sanitize_text_field( $_POST['name'] );
 		$email   = sanitize_text_field( $_POST['email'] );
-		$persons = sanitize_text_field( $_POST['persons'] );
+		$country = sanitize_text_field( $_POST['country'] );
 		$phone   = sanitize_text_field( $_POST['phone'] );
 
 		$data = array(
 			'name'    => $name,
 			'email'   => $email,
 			'phone'   => $phone,
-			'persons' => $persons,
+			'country' => $country,
 			
 		);
 		//print_r( $data );
@@ -338,7 +338,7 @@ function eduhub_process_reservation() {
 			'post_author' => 1,
 			'post_date'   => date( 'Y-m-d H:i:s' ),
 			'post_status' => 'publish',
-			'post_title'  => sprintf( '%s - Apply for %s persons on %s - %s', $name, $persons, $phone, $email ),
+			'post_title'  => sprintf( '%s - Apply for %s Email: %s Mobile Number: %s', $name, $country, $email, $phone),
 			'meta_input'  => $data
 		);
 
@@ -346,7 +346,7 @@ function eduhub_process_reservation() {
 			'post_type'   => 'reservation',
 			'post_status' => 'publish',
 			'meta_query'  => array(
-				'relation'    => 'AND',
+				'relation'    => 'OR',
 				'email_check' => array(
 					'key'   => 'email',
 					'value' => $email
@@ -402,34 +402,3 @@ function eduhub_admin_scripts($screen){
 	}
 }
 add_action('admin_enqueue_scripts','eduhub_admin_scripts');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

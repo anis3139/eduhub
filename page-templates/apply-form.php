@@ -8,7 +8,7 @@
 
 <?php get_header();?>
 <?php get_template_part("/page-templates/template-parts/menu");?>
-<?php get_template_part("/page-templates/template-parts/slider");?>
+<?php get_template_part("/page-templates/common/hero");?>
 
 
 
@@ -28,17 +28,17 @@
 					?>
 					<div class="d-md-flex">
 						<div class="form-group">
-							<input type="text" id="name" class="form-control" placeholder="Name">
+							<input type="text" id="name" class="form-control required" placeholder="Name" required>
 						</div>
 					</div>
 					<div class="d-md-flex">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Phone" id="phone">
+							<input  type="text" class="form-control required" placeholder="Phone" id="phone" required>
 						</div>
 					</div>					
 					<div class="d-md-flex">
 						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email" id="email">
+							<input type="email" class="form-control required" placeholder="Email" id="email" required>
 						</div>
 					</div>
 					<div class="d-md-flex">
@@ -46,20 +46,20 @@
 							<div class="form-field">
 								<div class="select-wrap">
 									<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-									<select name="" id="persons" class="form-control">
-										<option value="Select Your Country"  class=" bg-primary">Select Your Course</option>
-										<option value="Art Lesson" class=" bg-primary">Art Lesson</option>
-										<option value="Language Lesson" class=" bg-primary">Language Lesson</option>
-										<option value="Music Lesson" class=" bg-primary">Music Lesson</option>
-										<option value="Sports" class=" bg-primary">Sports</option>
-										<option value="Other Services" class=" bg-primary">Other Services</option>
+									<select name="" id="country" class="form-control" required>
+										<option disabled selected hidden value="Select Your Country"  class=" bg-primary"><?php _e('Select Your Country','eduhub');?></option>
+										<option value="UK" class=" bg-primary"><?php _e('UK','eduhub');?></option>
+										<option value="Canada" class=" bg-primary"><?php _e('Canada','eduhub');?></option>
+										<option value="USA" class=" bg-primary"><?php _e('USA','eduhub');?></option>
+										<option value="Australia" class=" bg-primary"><?php _e('Australia','eduhub');?></option>
+										<option value="Newziland" class=" bg-primary"><?php _e('Newziland','eduhub');?></option>
 									</select>
 								</div>
 							</div>
 						</div>
 						
 					</div>
-					<div class="d-md-flex">
+					<div class="d-md-flex mt-3">
 						<div class="form-group ml-md-4">
 							<input type="submit" id="reservenow" value="Request A Quote" class="btn btn-secondary py-3 px-4">
 						</div>
