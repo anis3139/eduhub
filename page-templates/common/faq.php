@@ -19,7 +19,7 @@
             $eduhub_faq_posts->the_post();
         ?>
 
-            <div class="acc col-md-8 offset-md-2 ftco-animate">
+            <div class="acc col-md-10 offset-md-1 ftco-animate">
                 <h3><?php the_title();?></h3>
                 <div class="content">
                     <div class="content-inner">

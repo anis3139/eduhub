@@ -25,12 +25,14 @@ $eduhub_section_description = $eduhub_section->post_content;
 				<?php echo apply_filters(the_content(),$eduhub_section_description);?>
 			</p>
 		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<iframe src="https://www.newwayuk.com/study-in-uk/" frameborder="0"></iframe>
+		<div class="row mt-5">
+			<div class="col-md-6">
+				<iframe height="500px" width="100%" src="https://www.newwayuk.com/study-in-uk/" frameborder="0"></iframe>
 			</div>
-			<div class="col-md-4"></div>
-			<div class="col-md-4"></div>
+			<div class="col-md-6">
+				<iframe width="100%" height="500px" src="https://www.youtube.com/embed/9piIwBat1i4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			
 		</div>
 
 
@@ -39,7 +41,7 @@ $eduhub_section_description = $eduhub_section->post_content;
 
 
 
-
+<?php get_template_part("/page-templates/common/faq")?>
 
 
 

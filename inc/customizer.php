@@ -2,6 +2,15 @@
 
 function eduhub_customizer_settings( $wp_eduhub ) {
  
+	
+	$wp_eduhub->add_panel( 'font_page', array(
+  		'title'           => __( 'Front Page Settings', 'eduhub' ),
+		'priority' => 40, 
+	) );
+	
+	
+	
+	
    /**
 	 * Topbar Settings
 	 */
@@ -10,6 +19,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	
 	$wp_eduhub->add_section( 'eduhub_topbar', array(
 		'title'           => __( 'Topbar Settings', 'eduhub' ),
+		'panel' => 'font_page',
 		'priority'        => '40',
 		'active_callback' => function () {
 			if(is_page_template('page-templates/landing.php')){
@@ -144,8 +154,9 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	 * Featured Post Settings
 	 */
     
-	$wp_eduhub->add_section( 'eduhub_topbar_page', array(
+	$wp_eduhub->add_section( 'eduhub_featured_post', array(
 		'title'           => __( 'Featured Posts Settings', 'eduhub' ),
+		'panel' => 'font_page',
 		'priority'        => '40',
 		'active_callback' => function () {
 			if(is_page_template('page-templates/landing.php')){
@@ -167,7 +178,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_one', array(
 		'label'    => __( 'Featured Post Icon One', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
         'choices' => array(
@@ -201,7 +212,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_one', array(
 		'label'    => __( 'Heading One', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -213,7 +224,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_one', array(
 		'label'    => __( 'Description One', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
@@ -227,7 +238,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_two', array(
 		'label'    => __( 'Featured Post Icon Two', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
          'choices' => array(
@@ -261,7 +272,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_two', array(
 		'label'    => __( 'Heading Two', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -273,7 +284,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_two', array(
 		'label'    => __( 'Description Two', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
@@ -289,7 +300,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_three', array(
 		'label'    => __( 'Featured Post Icon Three', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
        'choices' => array(
@@ -324,7 +335,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_three', array(
 		'label'    => __( 'Heading Three', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -336,7 +347,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_three', array(
 		'label'    => __( 'Description Three', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
@@ -351,7 +362,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_icon_four', array(
 		'label'    => __( 'Featured Post Icon Four', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
         'choices' => array(
@@ -386,7 +397,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_heading_four', array(
 		'label'    => __( 'Heading Four', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Heading', 'eduhub' ),
 		'type'     => 'text'
 	) );    
@@ -398,7 +409,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_featured_post_descriptions_four', array(
 		'label'    => __( 'Description Four', 'eduhub' ),
-		'section'  => 'eduhub_topbar_page',
+		'section'  => 'eduhub_featured_post',
         'description' => __( 'Featured Post Description', 'eduhub' ),
 		'type'     => 'text'
 	) );
@@ -406,13 +417,24 @@ function eduhub_customizer_settings( $wp_eduhub ) {
     
 	
 	
-
-  /**
-	 * Front Page Settings
-	 */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+   /* -----------------
+   About Section
+   ------------------------*/
     
-	$wp_eduhub->add_section( 'eduhub_front_page', array(
-		'title'           => __( 'Front Page Settings', 'eduhub' ),
+      
+	$wp_eduhub->add_section( 'eduhub_about_section', array(
+		'title'           => __( 'About Section Settings', 'eduhub' ),
+		'panel' => 'font_page',
 		'priority'        => '40',
 		'active_callback' => function () {
 			if(is_page_template('page-templates/landing.php')){
@@ -424,11 +446,9 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 		}
 	) );
      
-   
-    
-   /* About Section*/
-    
-    
+	
+	
+	
     $wp_eduhub->add_setting( 'eduhub_about_heading', array(
 		'default'   => "Why We Are The Best",
 		'transport' => 'postMessage',
@@ -436,7 +456,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_about_heading', array(
 		'label'    => __( 'About Section Heading', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_about_section',
 		'type'     => 'text'
 	) );
     
@@ -458,7 +478,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 
 	$wp_eduhub->add_control( 'eduhub_about_sub_heading', array(
 		'label'    => __( 'About Section Sub Heading', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'section'  => 'eduhub_about_section',
 		'type'     => 'textarea'
 	) );
       
@@ -471,8 +491,8 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_about_content_heading_one', array(
-		'label'    => __( 'About Section Content Heading', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'label'    => __( 'About Section Content Heading One', 'eduhub' ),
+		'section'  => 'eduhub_about_section',
 		'type'     => 'text'
 	) );
     
@@ -482,8 +502,8 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_about_content_desc_one', array(
-		'label'    => __( 'About Section Content Descriptions', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'label'    => __( 'About Section Content Descriptions One', 'eduhub' ),
+		'section'  => 'eduhub_about_section',
 		'type'     => 'textarea'
 	) );
     
@@ -495,8 +515,8 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_about_content_heading_two', array(
-		'label'    => __( 'About Section Content Heading', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'label'    => __( 'About Section Content Heading Two', 'eduhub' ),
+		'section'  => 'eduhub_about_section',
 		'type'     => 'text'
 	) );
     
@@ -506,8 +526,8 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_about_content_desc_two', array(
-		'label'    => __( 'About Section Content Descriptions', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'label'    => __( 'About Section Content Descriptions Two', 'eduhub' ),
+		'section'  => 'eduhub_about_section',
 		'type'     => 'textarea'
 	) );
     
@@ -518,8 +538,8 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_about_content_heading_three', array(
-		'label'    => __( 'About Section Content Heading', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'label'    => __( 'About Section Content Heading Three', 'eduhub' ),
+		'section'  => 'eduhub_about_section',
 		'type'     => 'text'
 	) );
     
@@ -529,17 +549,36 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_about_content_desc_three', array(
-		'label'    => __( 'About Section Content Descriptions', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'label'    => __( 'About Section Content Descriptions Three', 'eduhub' ),
+		'section'  => 'eduhub_about_section',
 		'type'     => 'textarea'
 	) );
     
    
+	
+
+	
+	
+
+  /**
+	 * Special Featured Settings
+	 */
     
-/*--------------
-why we are
--------------*/
-    
+	$wp_eduhub->add_section( 'eduhub_special_featured', array(
+		'title'           => __( 'Special Featured Settings', 'eduhub' ),
+		'panel' => 'font_page',
+		'priority'        => '40',
+		'active_callback' => function () {
+			if(is_page_template('page-templates/landing.php')){
+				return true;
+			}
+			return false;
+
+			return is_page_template( 'page-templates/landing.php' );
+		}
+	) );
+     
+   
 
      
     $wp_eduhub->add_setting( 'eduhub_expert_heading', array(
@@ -548,8 +587,8 @@ why we are
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_expert_heading', array(
-		'label'    => __( 'Experiance Section Heading', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'label'    => __( 'Special Featured Heading', 'eduhub' ),
+		'section'  => 'eduhub_special_featured',
 		'type'     => 'text'
 	) );
     
@@ -570,8 +609,8 @@ why we are
 
 	$wp_eduhub->add_control( 'eduhub_expert_content_heading_one', array(
 		'label'    => __( 'Heading', 'eduhub' ),
-		'description'    => __( 'Experiance Section Content Heading One', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'description'    => __( 'Special Featured Section Content Heading One', 'eduhub' ),
+		'section'  => 'eduhub_special_featured',
 		'type'     => 'text'
 	) );   
     
@@ -582,8 +621,8 @@ why we are
 
 	$wp_eduhub->add_control( 'eduhub_expert_content_desc_one', array(
 		'label'    => __( 'Description', 'eduhub' ),
-		'description'    => __( 'Experiance Section Content Description One', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'description'    => __( 'Special Featured Section Content Description One', 'eduhub' ),
+		'section'  => 'eduhub_special_featured',
 		'type'     => 'textarea'
 	) );
     
@@ -595,8 +634,8 @@ why we are
 
 	$wp_eduhub->add_control( 'eduhub_expert_content_heading_two', array(
 		'label'    => __( 'Heading', 'eduhub' ),
-		'description'    => __( 'Experiance Section Content Heading Two', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'description'    => __( 'Special Featured Section Content Heading Two', 'eduhub' ),
+		'section'  => 'eduhub_special_featured',
 		'type'     => 'text'
 	) );   
     
@@ -607,8 +646,8 @@ why we are
 
 	$wp_eduhub->add_control( 'eduhub_expert_content_desc_two', array(
 		'label'    => __( 'Description', 'eduhub' ),
-		'description'    => __( 'Experiance Section Content Description Two', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'description'    => __( 'Special Featured Section Content Description Two', 'eduhub' ),
+		'section'  => 'eduhub_special_featured',
 		'type'     => 'textarea'
 	) );
     
@@ -620,8 +659,8 @@ why we are
 
 	$wp_eduhub->add_control( 'eduhub_expert_content_heading_three', array(
 		'label'    => __( 'Heading', 'eduhub' ),
-		'description'    => __( 'Experiance Section Content Heading Three', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'description'    => __( 'Special Featured Section Content Heading Three', 'eduhub' ),
+		'section'  => 'eduhub_special_featured',
 		'type'     => 'text'
 	) );   
     
@@ -632,12 +671,38 @@ why we are
 
 	$wp_eduhub->add_control( 'eduhub_expert_content_desc_three', array(
 		'label'    => __( 'Description', 'eduhub' ),
-		'description'    => __( 'Experiance Section Content Description Three', 'eduhub' ),
-		'section'  => 'eduhub_front_page',
+		'description'    => __( 'Special Featured Section Content Description Three', 'eduhub' ),
+		'section'  => 'eduhub_special_featured',
 		'type'     => 'textarea'
 	) );
     
     
+	
+	
+	
+	
+	
+	
+	  /**
+	 * Front Page Settings
+	 */
+    
+	$wp_eduhub->add_section( 'eduhub_front_page', array(
+		'title'           => __( 'Others Section Settings', 'eduhub' ),
+		'panel' => 'font_page',
+		'priority'        => '40',
+		'active_callback' => function () {
+			if(is_page_template('page-templates/landing.php')){
+				return true;
+			}
+			return false;
+
+			return is_page_template( 'page-templates/landing.php' );
+		}
+	) );
+     
+   
+  
  /*   
    --------------
     Testimonials
@@ -887,8 +952,10 @@ why we are
        /*-------------- 
        Statistics
        -----------------*/
+	
     $wp_eduhub->add_section( 'eduhub_statistics_section', array(
 		'title'           => __( 'Statistics Settings', 'eduhub' ),
+		'panel' => 'font_page',
 		'priority'        => '40',
 		'active_callback' => function () {
 			if(is_page_template('page-templates/landing.php')){
@@ -1183,14 +1250,6 @@ why we are
 		)
 	);
     
-    
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -1201,6 +1260,7 @@ why we are
 	
 	 $wp_eduhub->add_section( 'eduhub_heading_color_section', array(
 		'title'           => __( 'Front Page Color Control', 'eduhub' ),
+		 'panel' => 'font_page',
 		'priority'        => '40',
 		'active_callback' => function () {
 			if(is_page_template('page-templates/landing.php')){
