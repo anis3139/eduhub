@@ -147,6 +147,21 @@ EOD;
     wp_enqueue_script('googlemap-js',get_theme_file_uri('//maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false'),['jquery'],VERSION,true);       
     wp_enqueue_script('faq-js',get_theme_file_uri('/assets/js/faq.js'),['jquery'],VERSION,true);
     wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),['jquery'],VERSION,true);
+	
+	
+	
+	wp_enqueue_script( 'eduhub-reservation-js', get_template_directory_uri() . '/assets/js/reservation.js', array( 'jquery' ), VERSION, true );
+		$ajaxurl = admin_url( 'admin-ajax.php' );
+		wp_localize_script( 'eduhub-reservation-js', 'eduhuburl', array( 'ajaxurl' => $ajaxurl ) );
+	
+	
+	
+	
+	
+	
+	
+	
+	
    
 }
 add_action('wp_enqueue_scripts','eduhub_assets');
@@ -251,11 +266,11 @@ function eduhub_about_page_template_banner() {
         if ( current_theme_supports( "custom-header" ) ) {
             ?>
 <style>
-    .hero-wrap-2 {
-        background-image: url(<?php echo header_image();
-        ?>);
-        background-size: cover;
-    }
+	.hero-wrap-2 {
+		background-image: url(<?php echo header_image();
+		?>);
+		background-size: cover;
+	}
 
 </style>
 <?php
@@ -293,4 +308,128 @@ FORM;
     return $newform;
 }
 add_filter( "get_search_form", "eduhub_search_form" );
+
+
+
+
+
+
+
+
+function eduhub_process_reservation() {
+
+	if ( check_ajax_referer( 'reservation', 'rn' ) ) {
+		$name    = sanitize_text_field( $_POST['name'] );
+		$email   = sanitize_text_field( $_POST['email'] );
+		$persons = sanitize_text_field( $_POST['persons'] );
+		$phone   = sanitize_text_field( $_POST['phone'] );
+
+		$data = array(
+			'name'    => $name,
+			'email'   => $email,
+			'phone'   => $phone,
+			'persons' => $persons,
+			
+		);
+		//print_r( $data );
+
+		$reservation_arguments = array(
+			'post_type'   => 'reservation',
+			'post_author' => 1,
+			'post_date'   => date( 'Y-m-d H:i:s' ),
+			'post_status' => 'publish',
+			'post_title'  => sprintf( '%s - Apply for %s persons on %s - %s', $name, $persons, $phone, $email ),
+			'meta_input'  => $data
+		);
+
+		$reservations = new WP_Query( array(
+			'post_type'   => 'reservation',
+			'post_status' => 'publish',
+			'meta_query'  => array(
+				'relation'    => 'AND',
+				'email_check' => array(
+					'key'   => 'email',
+					'value' => $email
+				),
+				'date_check'  => array(
+					'key'   => 'phone',
+					'value' => $phone
+				),
+			)
+		) );
+		if ( $reservations->found_posts > 0 ) {
+			echo 'Duplicate';
+		} else {
+			$wp_error       = '';
+			wp_insert_post( $reservation_arguments, $wp_error );
+
+			//transient check
+			$reservation_count = get_transient('res_count')?get_transient('res_count'):0;
+			//transient check end
+
+			if ( ! $wp_error ) {
+
+				$reservation_count++;
+				set_transient('res_count',$reservation_count,0);
+				echo "Successful";
+			}
+		}
+
+	} else {
+		echo 'Not allowed';
+	}
+	die();
+}
+
+add_action( 'wp_ajax_reservation', 'eduhub_process_reservation' );
+add_action( 'wp_ajax_nopriv_reservation', 'eduhub_process_reservation' );
+
+
+
+function eduhub_change_menu($menu){
+	$reservation_count = get_transient('res_count')?get_transient('res_count'):0;
+	if($reservation_count>0){
+		$menu[13][0] = "Reservation <span class='awaiting-mod'>{$reservation_count}</span> ";
+	}
+	return $menu;
+}
+add_filter('add_menu_classes','eduhub_change_menu');
+
+function eduhub_admin_scripts($screen){
+	$_screen = get_current_screen();
+	if('edit.php'==$screen && 'reservation'==$_screen->post_type){
+		delete_transient('res_count');
+	}
+}
+add_action('admin_enqueue_scripts','eduhub_admin_scripts');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
