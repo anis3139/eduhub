@@ -92,6 +92,9 @@ function eduhub_assets(){
     $heading_button_color = get_theme_mod( 'eduhub_button_color', '#fff' );
     $heading_button_bg_color = get_theme_mod( 'eduhub_button_bg_color', '#fda638' );
     $about_section_icon_bg = get_theme_mod( 'eduhub_about_section_bg', '#1EAAF1' );
+    $faq_section_bg = get_theme_mod( 'eduhub_faq_section_bg', '#fff' );
+    $faq_section_color = get_theme_mod( 'eduhub_faq_section_color', '#000' );
+    $topbar_background_color = get_theme_mod( 'eduhub_topbar_background_color', '#000' );
 	$heading_style      = <<<EOD
  .heading-section h2 {
     color: {$heading_icon_color};
@@ -117,6 +120,13 @@ function eduhub_assets(){
 .services-2 .icon{
     background: {$about_section_icon_bg};
 	 color: {};
+}
+.acc> h3{
+    background: {$faq_section_bg};
+	 color: {$faq_section_color};
+}
+.social-topbar{
+    background: {$topbar_background_color};
 }
 EOD;
 
@@ -386,9 +396,10 @@ add_action( 'wp_ajax_nopriv_reservation', 'eduhub_process_reservation' );
 function eduhub_change_menu($menu){
 	$reservation_count = get_transient('res_count')?get_transient('res_count'):0;
 	if($reservation_count>0){
-		$menu[13][0] = "Reservation <span class='awaiting-mod'>{$reservation_count}</span> ";
+		$menu[11][0] = "Reservation <span class='awaiting-mod'>{$reservation_count}</span> ";
 	}
 	return $menu;
+	
 }
 add_filter('add_menu_classes','eduhub_change_menu');
 

@@ -1345,14 +1345,57 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 		'label'    => __( 'About Section Icon', 'eduhub' ),
 		'section'  => 'eduhub_heading_color_section',
 		'settings' => 'eduhub_about_section_bg'
+	) ) );       	
+	
+/*	
+	-------------------
+		FAQ Section
+	-------------------*/
+	
+	
+    $wp_eduhub->add_setting( 'eduhub_faq_section_bg', array(
+		'default'   => '#fff',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_faq_section_bg_control', array(
+		'label'    => __( 'FAQ Section Background', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_faq_section_bg'
+	) ) );
+    
+    	
+   $wp_eduhub->add_setting( 'eduhub_faq_section_color', array(
+		'default'   => '#000',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_faq_section_color_control', array(
+		'label'    => __( 'FAQ Section Font Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_faq_section_color'
 	) ) );
     
     	
 
     
+/*    
+    --------------
+		Topbar Color
+	--------------*/
     
     
-    
+        	
+   $wp_eduhub->add_setting( 'eduhub_topbar_background_color', array(
+		'default'   => '#000',
+		'transport' => 'postMessage'
+	) );
+
+	$wp_eduhub->add_control( new WP_Customize_Color_Control( $wp_eduhub, 'eduhub_topbar_background_color_control', array(
+		'label'    => __( 'Topbar Background Color', 'eduhub' ),
+		'section'  => 'eduhub_heading_color_section',
+		'settings' => 'eduhub_topbar_background_color'
+	) ) );
     
     
     

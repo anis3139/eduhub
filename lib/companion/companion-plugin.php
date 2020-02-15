@@ -247,7 +247,7 @@ function jurist_register_my_cpts_section() {
 		"hierarchical" => true,
 		"rewrite" => [ "slug" => "reservation", "with_front" => true ],
 		"query_var" => true,
-		"menu_position" => 20,
+		"menu_position" => 10,
 		"menu_icon" => "dashicons-book-alt",
 		"supports" => [ "title"],
         "taxonomies"=>array('category'),

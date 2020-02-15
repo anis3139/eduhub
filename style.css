@@ -473,7 +473,7 @@ FAQ Section
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     position: relative;
-	box-shadow: 0px 0px 20px 2px #E9EBEC;
+	box-shadow: 0px 0px 5px 2px #E9EBEC;
 }
 .acc> h3:after {
     content: '+';
@@ -557,7 +557,7 @@ logo
 }
 .social-topbar{
 	height: 80px;
-	background: #E62B31;
+	background: #000;
 }
 .navbar{
 	height: 150px;

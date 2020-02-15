@@ -331,9 +331,28 @@
         });
     })	
 	
-	
+	/*FAQ section*/
 
+	wp.customize('eduhub_faq_section_bg',function(value){
+        value.bind(function(newvalue){
+            $(".acc> h3").css("background",newvalue);
+        });
+    })
+	wp.customize('eduhub_faq_section_color',function(value){
+        value.bind(function(newvalue){
+            $(".acc> h3").css("color",newvalue);
+        });
+    })	
 	
+	
+	
+	/*Topbar*/
+
+		wp.customize('eduhub_topbar_background_color',function(value){
+        value.bind(function(newvalue){
+            $(".social-topbar").css("background",newvalue);
+        });
+    })	
 	
 	
 	
