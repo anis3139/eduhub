@@ -664,3 +664,84 @@ video
 
 
 
+
+/*---------------
+menu
+-------------*/
+
+nav.navbar ul > li ul.sub_menu {
+    position: absolute;
+    min-width: 200px;
+    padding: 15px 15px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+    -webkit-transform: perspective(600px) rotateX(-90deg);
+    transform: perspective(600px) rotateX(-90deg);
+    -webkit-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    left: 0;
+    right: auto;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 99;
+    top: 100%;
+    text-align: left;
+}
+
+nav.navbar ul > li ul.sub_menu li a {
+    font-weight: 500;
+    display: block;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+nav.navbar ul > li:hover ul.sub_menu {
+    opacity: 1;
+    visibility: visible;
+    transform: perspective(600px) rotateX(0deg);
+	
+}
+
+nav.navbar ul > li {
+    display: block;
+    position: relative;
+}
+
+nav.navbar ul > li:hover > a {
+    color: #FFD54C;
+}
+
+nav.navbar ul > li ul.sub_menu li a:hover {
+    color: #FFD54C;
+}
+
+nav.navbar ul > li > ul.sub_menu > li > a {
+    font-weight: 500;
+    display: block;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    color: #333333 !important;
+	
+}
+
+.menu-item-has-children > a::after {
+    content: "\f107";
+    font-family: FontAwesome;
+    margin-left: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+

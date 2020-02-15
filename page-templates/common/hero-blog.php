@@ -1,13 +1,13 @@
-<?php 
-$eduhub_banner_image=get_template_directory_uri().'/assets/images/bg_2.jpg';
-$eduhub_featured_image=get_the_post_thumbnail_url(null, "large");
-if(isset($eduhub_featured_image)){
-$eduhub_banner_image= $eduhub_featured_image;
+<?php if(is_home()) { ?>
+    <?php
+        $page_for_posts = get_option( 'page_for_posts' );
+        $src = get_the_post_thumbnail_url( $page_for_posts, 'full' );
+    ?>
+<?php } else {
+    $src = get_the_post_thumbnail_url($post->ID, 'full' );
 }
 ?>
-
-
-<section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo $eduhub_banner_image;?>');">
+<section class="hero-wrap hero-wrap-2" style="background-image: url( '<?php echo $src; ?>' );">
     <div class=""></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -18,3 +18,5 @@ $eduhub_banner_image= $eduhub_featured_image;
         </div>
     </div>
 </section>
+
+

@@ -14,11 +14,7 @@ define( 'CS_ACTIVE_METABOX', true ); // default true
 define( 'CS_ACTIVE_TAXONOMY', false ); // default true
 define( 'CS_ACTIVE_SHORTCODE', false ); // default true
 define( 'CS_ACTIVE_CUSTOMIZE', true ); // default true
-if ( ! file_exists( get_template_directory() . '/assets/nav-walker/class-wp-bootstrap-navwalker.php' ) ) {
-    return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
-} else {
-    require_once get_template_directory() . '/assets/nav-walker/class-wp-bootstrap-navwalker.php';
-}
+
 if ( site_url() == "http://localhost" ) {
 	define( "VERSION", time() );
 } else {
@@ -77,7 +73,8 @@ add_action( 'after_setup_theme', 'eduhub_content_width', 0 );
 
 function eduhub_assets(){
 	wp_enqueue_style('google-fonts','//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900');
-    wp_enqueue_style('google-fonts-swap','//fonts.googleapis.com/css?family=Fredericka+the+Great');
+    wp_enqueue_style('google-fonts-swap','//fonts.googleapis.com/css?family=Fredericka+the+Great');    
+	wp_enqueue_style('fonts-awesome','//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_enqueue_style('iconic-bootstrap-css',get_theme_file_uri('/assets/css/open-iconic-bootstrap.min.css'));
 	wp_enqueue_style('carousel-css',get_theme_file_uri('/assets/css/owl.carousel.min.css'));
     wp_enqueue_style('animate-css',get_theme_file_uri('/assets/css/animate.css'));
@@ -402,3 +399,26 @@ function eduhub_admin_scripts($screen){
 	}
 }
 add_action('admin_enqueue_scripts','eduhub_admin_scripts');
+
+
+
+
+// Add Menu Class li Tag
+function tanem_menu_item_class($classes, $item)
+{
+    $classes[] = 'nav-item';
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'tanem_menu_item_class', 10, 2);
+
+// Add Menu Class a Tag
+function add_link_atts($atts)
+{
+    $atts['class'] = "nav-link";
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_link_atts', 100, 1);
+
+
+
+

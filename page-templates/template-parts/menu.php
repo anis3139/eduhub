@@ -10,17 +10,19 @@
             <span class="oi oi-menu"></span> <?php _e('Menu','eduhub')?>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="ftco-nav">
-
-
-            <?php
-		             wp_nav_menu( array(
-                            'theme_location'  => 'primary',
-                            'depth'           => 2,
-                            'menu_class'      => 'navbar-nav ml-auto',
-                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'         => new WP_Bootstrap_Navwalker(),
-                        ) );
-		           ?>
+		   <?php
+			$eduhub_main_menu = wp_nav_menu(
+				array(
+					'theme_location' => 'primary',
+					'menu_id' => 'topmenu',
+					'menu_class' => 'navbar-nav ml-auto',
+					'container' => 'false', // Remove Defult Div Container
+					'echo' => false 
+				)
+			);
+			$eduhub_main_menu = str_replace("sub-menu", "sub-menu sub_menu pages",  $eduhub_main_menu);
+			echo $eduhub_main_menu;
+			?>
 
         </div>
     </div>
