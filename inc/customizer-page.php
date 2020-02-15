@@ -173,12 +173,12 @@ function eduhub_about_us_customize_register($wp_eduhub){
 		'title'           => __( 'Study Abroad Settings', 'eduhub' ),
 		'priority'        => '40',
 		'active_callback' => function () {
-			if(is_page_template('page-templates/study-abroad.php')){
+			if(is_page_template('page-templates/study.php')){
 				return true;
 			}
 			return false;
 
-			return is_page_template( 'page-templates/study-abroad.php' );
+			return is_page_template( 'page-templates/study.php' );
 		}
 	) );
      
@@ -348,13 +348,21 @@ function eduhub_about_us_customize_register($wp_eduhub){
     
     
     
-       /**
-	 * Contact Pages Settings
+     /**
+	 * Apply Now Pages Settings
 	 */
 
 	$wp_eduhub->add_section( 'eduhub_apply_now_page', array(
-		'title'           => __( 'Contact Page setting', 'eduhub' ),
-		'priority'        => '40',
+		'title'           => __( 'Apply Now settings', 'eduhub' ),
+		'priority'        => '30',
+		'active_callback' => function () {
+			if(is_page_template('page-templates/apply-form.php')){
+				return true;
+			}
+			return false;
+
+			return is_page_template( 'page-templates/apply-form.php' );
+		}
 	) );
     
        $wp_eduhub->add_setting( 'eduhub_apply_heading', array(

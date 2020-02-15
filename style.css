@@ -650,9 +650,17 @@ Apply Form
 }
 
 
+/*
+------------
+video
+--------------
+*/
 
-
-
+.video .wp-block-embed__wrapper iframe{
+	height: 300px;
+	width: 100%;
+	overflow: hidden;
+}
 
 
 

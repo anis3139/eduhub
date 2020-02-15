@@ -1,19 +1,19 @@
 <?php
-function jurist_testimonials_metabox( $metaboxes ) {
+function eduhub_testimonials_metabox( $metaboxes ) {
     $metaboxes[] = array(
-        'id'        => 'jurist_testimonials',
-        'title'     => __( 'testimonials Details', 'jurist' ),
+        'id'        => 'eduhub_testimonials',
+        'title'     => __( 'Testimonials Details', 'eduhub' ),
         'post_type' => 'eduhub_testimonials',
         'context'   => 'normal',
         'priority'  => 'default',
         'sections'  => array(
             array(
-                'name'     => 'jurist_testimonials_section_one',
+                'name'     => 'eduhub_testimonials_section_one',
                 'icon'   => 'fa fa-image',
                 'fields' => array(
                     array(
                         'id'    => 't_designation',
-                        'title'   => __( 'Designation', 'jurist' ),
+                        'title'   => __( 'Designation', 'eduhub' ),
                         'type'    => 'text',
              ), 
           ),
@@ -22,4 +22,4 @@ function jurist_testimonials_metabox( $metaboxes ) {
 );
     return $metaboxes;
 }
-add_filter( 'cs_metabox_options', 'jurist_testimonials_metabox' );
+add_filter( 'cs_metabox_options', 'eduhub_testimonials_metabox' );

@@ -19,7 +19,7 @@
                         while ( $eduhub_testimonials_posts->have_posts() ):
                         $eduhub_testimonials_posts->the_post();
                         $eduhub_testimonials_iamge=get_the_post_thumbnail_url(null, "full");
-                    $eduhub_testimonials_meta= get_post_meta(get_the_ID(),'jurist_testimonials',true);
+                    $eduhub_testimonials_meta= get_post_meta(get_the_ID(),'eduhub_testimonials',true);
                     ?>
                     <div class="item">
                      
@@ -33,8 +33,11 @@
                                 </span>
                                 <p class="testimony-hight overflow-hidden"><?php echo esc_html(wp_trim_words(get_the_excerpt(),40));?></p>
                                 <p class="name"><?php the_title();?></p>
+                                <?php if($eduhub_testimonials_meta):?>
                                 <span class="position"><?php 
-                                    echo esc_html($eduhub_testimonials_meta['t_designation']);?></span>
+                                    echo esc_html($eduhub_testimonials_meta['t_designation']);?>
+                                 </span>
+                                 <?php endif;?>
                             </div>
                            
                         </div>

@@ -5,7 +5,6 @@
 
 <?php 
 global $eduhub_section_id;
-$eduhub_section_meta        = get_post_meta( $eduhub_section_id, 'eduhub_study_abroad', true );
 $eduhub_section             = get_post( $eduhub_section_id );
 $eduhub_section_title       = $eduhub_section->post_title;
 $eduhub_section_description = $eduhub_section->post_content;
@@ -22,17 +21,34 @@ $eduhub_section_description = $eduhub_section->post_content;
 				<?php echo esc_html($eduhub_section_title);?>
 			</h2>
 			<p class="lead text-justify" data-aos="fade-up" data-aos-delay="100">
-				<?php echo apply_filters(the_content(),$eduhub_section_description);?>
+				<?php echo wp_kses_post($eduhub_section_description);?>
 			</p>
 		</div>
+
 		<div class="row mt-5">
-			<div class="col-md-6">
-				<iframe height="500px" width="100%" src="https://www.newwayuk.com/study-in-uk/" frameborder="0"></iframe>
+			<?php
+                  $eduhub_video_posts = new WP_Query( array(
+                  'post_type' => 'video',
+                  'posts_per_page'      => -1,  
+                  ) );
+                  if( $eduhub_video_posts->have_posts() ):
+                  while ( $eduhub_video_posts->have_posts() ):
+                  $eduhub_video_posts->the_post();
+             ?>
+			<div class="col-md-4 blog-box">
+				<div class="text-center">
+					<h3><?php the_title();?></h3>
+				</div>
+				<div class="video text-center">
+					<?php the_content();?>
+				</div>
+				
 			</div>
-			<div class="col-md-6">
-				<iframe width="100%" height="500px" src="https://www.youtube.com/embed/9piIwBat1i4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			
+			<?php 
+                endwhile;
+               wp_reset_query();
+                endif;
+             ?>
 		</div>
 
 
