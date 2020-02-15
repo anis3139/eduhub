@@ -236,7 +236,7 @@ function eduhub_about_us_customize_register($wp_eduhub){
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_study_abroad_description', array(
-		'label'    => __( 'Heading', 'eduhub' ),
+		'label'    => __( 'Description', 'eduhub' ),
 		'section'  => 'eduhub_study_abroad',
 		'type'     => 'textarea',
 

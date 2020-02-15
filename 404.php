@@ -1,6 +1,4 @@
 <?php get_header();?>
-<?php get_template_part("/page-templates/template-parts/menu")?>
-
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo get_template_directory_uri()?>./assets/images/404_not_found.png');">
     <div class="container">
