@@ -686,7 +686,7 @@ nav.navbar ul > li ul.sub_menu {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     z-index: 99;
-    top: 100%;
+    top: 89%;
     text-align: left;
 }
 
@@ -727,6 +727,11 @@ nav.navbar ul > li > ul.sub_menu > li > a {
     font-size: 13px;
     color: #333333 !important;
 	
+	
+}
+nav.navbar ul > li > ul.sub_menu > li:not(:last-child){
+	border-bottom: 1px solid #DEE1E6;
+	
 }
 
 .menu-item-has-children > a::after {
@@ -735,7 +740,12 @@ nav.navbar ul > li > ul.sub_menu > li > a {
     margin-left: 6px;
 }
 
-
+@media only screen and (max-width:720px){
+	nav.navbar ul > li ul.sub_menu{
+		left: 20%;
+		background: rgba(255, 255, 255, 0.7);
+	}
+}
 
 
 
