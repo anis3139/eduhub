@@ -81,6 +81,12 @@ function eduhub_register_required_plugins() {
             'name'     => 'Piklist',
             'slug'     => 'piklist',
             'required' => false,
+        ),			
+		array(
+            'name'     => 'Social Icon',
+            'slug'     => 'rainy-forest-si',
+			'source'   =>'https://github.com/anis3139/socialicon/archive/master.zip',
+            'required' => false,
         ),	
 	
 	);

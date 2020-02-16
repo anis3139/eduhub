@@ -1,48 +1,4 @@
 <?php
-function eduhub_button( $attributes ) {
-
-    $default = array(
-        'type'=>'primary',
-        'title'=>__("Button",'eduhub'),
-        'url'=>'',
-    );
-
-    $button_attributes = shortcode_atts($default,$attributes);
-
-
-    return sprintf( '<a target="_blank" class="btn btn--%s full-width" href="%s">%s</a>',
-        $button_attributes['type'],
-        $button_attributes['url'],
-        $button_attributes['title']
-    );
-}
-
-add_shortcode( 'button', 'eduhub_button' );
-
-
-function eduhub_button2( $attributes, $content='' ) {
-    $default = array(
-        'type'=>'primary',
-        'title'=>__("Button",'eduhub'),
-        'url'=>'',
-    );
-
-    $button_attributes = shortcode_atts($default,$attributes);
-
-
-    return sprintf( '<a target="_blank" class="btn btn--%s full-width" href="%s">%s</a>',
-        $button_attributes['type'],
-        $button_attributes['url'],
-        do_shortcode($content)
-    );
-}
-
-add_shortcode( 'button2', 'eduhub_button2' );
-
-function eduhub_uppercase($attributes, $content=''){
-    return strtoupper(do_shortcode($content));
-}
-add_shortcode('uc','eduhub_uppercase');
 
 function eduhub_google_map($attributes){
     $default = array(

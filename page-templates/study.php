@@ -29,10 +29,13 @@
                         while ( $eduhub_study_abroad_posts->have_posts() ):
                         $eduhub_study_abroad_posts->the_post();
                    	?>
-				<button type="button" class="btn btn-danger btn-lg btn-block">
-					<a href="<?php the_permalink();?>"><?php the_title();?></a>
-				</button>
-
+				<a class="" href="<?php the_permalink();?>">
+					<div class="">
+						<p class="text-center text-light study-country-item">
+						<?php the_title();?>
+						</p>
+					</div>
+				</a>
 				<?php 
                         endwhile;
                         wp_reset_query();

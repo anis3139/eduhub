@@ -1,23 +1,5 @@
 ;(function ($) {
 
-     /*Social Link*/
-     
-    wp.customize('jsocial_link_facebook',function(value){
-        value.bind(function(newvalue){
-            $("#eduhub-facebook").html(newvalue);
-        });
-    });
-    wp.customize('jsocial_link_twitter',function(value){
-        value.bind(function(newvalue){
-            $("#eduhub-twitter").html(newvalue);
-        });
-    });
-    
-    wp.customize('jsocial_link_instagram',function(value){
-        value.bind(function(newvalue){
-            $("#eduhub-instagram").html(newvalue);
-        });
-    }); 
     
     /*Featured Post*/
     
