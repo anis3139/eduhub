@@ -23,10 +23,15 @@
                         </div>
                         <div class="col-md pr-4 d-flex topper align-items-center justify-content-around social-icon pb-1" >
                             <div class="text-white ftco-footer-social list-unstyled float-md-left float-lft mr-2 pt-3">
-                                <li class="ftco-animate" id="eduhub-facebook"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_facebook',__('https://www.facebook.com/anis3139','eduhub')));?>"><span class="icon-facebook"></span></a></li>
+                                <!--<li class="ftco-animate" id="eduhub-facebook"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_facebook',__('https://www.facebook.com/anis3139','eduhub')));?>"><span class="icon-facebook"></span></a></li>
                                  <li class="ftco-animate" id="eduhub-twitter"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_twitter',__('https://www.twitter.com/anis3139','eduhub')));?>"><span class="icon-twitter"></span></a></li>
                                 <li class="ftco-animate"  id="eduhub-instagram"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_instagram',__('https://www.instagram.com/anis.arronno','eduhub')));?>"><span class="icon-instagram"></span></a></li>
-                                <li class="ftco-animate" id="j-youtube"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_youtube',__('https://www.youtube.com/anis.arronno','eduhub')));?>"><span class="icon-youtube"></span></a></li>
+                                <li class="ftco-animate" id="j-youtube"><a href="<?php echo esc_url(get_theme_mod('jsocial_link_youtube',__('https://www.youtube.com/anis.arronno','eduhub')));?>"><span class="icon-youtube"></span></a></li>-->
+                                <?php 
+									if ( is_active_sidebar( "socialicon" ) ) {
+                        		dynamic_sidebar( "socialicon" );
+                    				}
+                    			?>
                             </div>
                         </div>
                     </div>
@@ -34,5 +39,5 @@
             </div>
         </div>
     </div>
-<?php get_template_part("/page-templates/template-parts/menu")?>
+<?php get_template_part("/page-templates/common/menu")?>
     <!-- END nav -->

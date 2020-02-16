@@ -1,6 +1,8 @@
 <?php 
 require_once( get_theme_file_path("/lib/tgm-plugin/class-tgm-plugin-activation.php") );
 require_once( get_theme_file_path("/inc/tgm.php") );
+require_once( get_theme_file_path("/inc/shortcode/shortcode.php") );
+require_once( get_theme_file_path("/inc/shortcode/shortcode-ui.php") );
 require_once( get_theme_file_path("/inc/customizer.php") );
 require_once( get_theme_file_path("/inc/customizer-page.php") );
 require_once( get_theme_file_path( "/lib/companion/companion-plugin.php" ) );
@@ -253,9 +255,9 @@ function eduhub_widgets_init() {
 		'after_title'   => '</h3>',
 	) );   
     ;register_sidebar( array(
-		'name'          => esc_html__( 'Newsletter', 'eduhub' ),
-		'id'            => 'newsletter',
-		'description'   => esc_html__( 'Add Newsletter widgets here.', 'eduhub' ),
+		'name'          => esc_html__( 'Topbar Social Icon', 'eduhub' ),
+		'id'            => 'socialicon',
+		'description'   => esc_html__( 'Add Social Icon widgets here', 'eduhub' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3>',

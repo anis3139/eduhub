@@ -4,7 +4,7 @@
 */
 ?>
 <?php get_header();?>
-<?php get_template_part("/page-templates/template-parts/slider")?>
+<?php get_template_part("/page-templates/common/slider")?>
 <?php get_template_part("/page-templates/template-parts/featured")?>
 <?php get_template_part("/page-templates/template-parts/about")?>
 <?php get_template_part("/page-templates/template-parts/statistics")?>

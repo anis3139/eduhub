@@ -71,8 +71,17 @@ function eduhub_register_required_plugins() {
             'name'     => 'Post Meta Inspector',
             'slug'     => 'post-meta-inspector',
             'required' => false,
+        ),
+		array(
+            'name'     => 'Shortcode UI',
+            'slug'     => 'shortcode-ui',
+            'required' => false,
         ),	
-		
+			array(
+            'name'     => 'Piklist',
+            'slug'     => 'piklist',
+            'required' => false,
+        ),	
 	
 	);
 

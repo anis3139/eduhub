@@ -540,11 +540,17 @@ logo
     .ftco-section {
         padding: 4em 0;
     }
+	.social-icon-footer{
+		display: none;
+	}
 }
 @media only screen and (max-width:720px) {
     .social-icon {
         display: none;
     }
+	.social-icon-footer{
+		display: block;
+	}
     .breadcrumb {
         margin-left: 20%;
     }
@@ -746,9 +752,6 @@ nav.navbar ul > li > ul.sub_menu > li:not(:last-child){
 		background: rgba(255, 255, 255, 0.7);
 	}
 }
-
-
-
 
 
 
