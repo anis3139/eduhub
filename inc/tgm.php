@@ -76,16 +76,11 @@ function eduhub_register_required_plugins() {
             'name'     => 'Shortcode UI',
             'slug'     => 'shortcode-ui',
             'required' => false,
-        ),	
-			array(
-            'name'     => 'Piklist',
-            'slug'     => 'piklist',
-            'required' => false,
-        ),			
+        ),				
 		array(
-            'name'     => 'Social Icon',
-            'slug'     => 'rainy-forest-si',
-			'source'   =>'https://github.com/anis3139/socialicon/archive/master.zip',
+            'name'     => 'Eduhub Assets',
+            'slug'     => 'eduhub-assets',
+			'source'   =>'https://github.com/anis3139/eduhub-assets/archive/master.zip',
             'required' => false,
         ),	
 	

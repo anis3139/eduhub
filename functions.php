@@ -1,29 +1,21 @@
 <?php 
 require_once( get_theme_file_path("/lib/tgm-plugin/class-tgm-plugin-activation.php") );
 require_once( get_theme_file_path("/inc/tgm.php") );
-require_once( get_theme_file_path("/inc/shortcode/shortcode.php") );
-require_once( get_theme_file_path("/inc/shortcode/shortcode-ui.php") );
 require_once( get_theme_file_path("/inc/customizer.php") );
 require_once( get_theme_file_path("/inc/customizer-page.php") );
-require_once( get_theme_file_path( "/lib/companion/companion-plugin.php" ) );
 require_once( get_theme_file_path( "/lib/csf/cs-framework.php" ) );
 require_once( get_theme_file_path( "/inc/mj-wp-breadcrumb/mj-wp-breadcrumb.php" ) );
 require_once( get_theme_file_path( "/inc/metaboxes/page-testimonials.php" ) );
-
-
 define( 'CS_ACTIVE_FRAMEWORK', false ); // default true
 define( 'CS_ACTIVE_METABOX', true ); // default true
 define( 'CS_ACTIVE_TAXONOMY', false ); // default true
 define( 'CS_ACTIVE_SHORTCODE', false ); // default true
 define( 'CS_ACTIVE_CUSTOMIZE', true ); // default true
-
 if ( site_url() == "http://localhost" ) {
 	define( "VERSION", time() );
 } else {
 	define( "VERSION", wp_get_theme()->get( "Version" ) );
 }
-
-
 function eduhub_theme_setup() {
 	load_theme_textdomain( 'eduhub', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
@@ -71,8 +63,6 @@ function eduhub_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'eduhub_content_width', 1170 );
 }
 add_action( 'after_setup_theme', 'eduhub_content_width', 0 );
-
-
 function eduhub_assets(){
 	wp_enqueue_style('google-fonts','//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900');
     wp_enqueue_style('google-fonts-swap','//fonts.googleapis.com/css?family=Fredericka+the+Great');    
@@ -113,7 +103,6 @@ function eduhub_assets(){
 .btn.btn-secondary{
     background: {$heading_button_bg_color};
     border: {$heading_button_bg_color};
-	
 }
 .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {
     border: {$heading_button_bg_color};
@@ -131,15 +120,7 @@ function eduhub_assets(){
     background: {$topbar_background_color};
 }
 EOD;
-
 	wp_add_inline_style( 'eduhub-css', $heading_style );
-	
-	
-	
-	
-	
-	
-    
 	wp_enqueue_script('jquery-js',get_theme_file_uri('/assets/js/jquery.min.js'),null,'default',true);
 	wp_enqueue_script('bootstrap-js',get_theme_file_uri('/assets/js/bootstrap.min.js'),['jquery'],'default',true);
 	wp_enqueue_script('migrate-js',get_theme_file_uri('/assets/js/jquery-migrate-3.0.1.min.js'),['jquery'],'default',true);
@@ -152,29 +133,14 @@ EOD;
     wp_enqueue_script('aos-js',get_theme_file_uri('/assets/js/aos.js'),['jquery'],VERSION,true); 
     wp_enqueue_script('animateNumber-js',get_theme_file_uri('/assets/js/jquery.animateNumber.min.js'),['jquery'],VERSION,true);
     wp_enqueue_script('scrollax-js',get_theme_file_uri('/assets/js/scrollax.min.js'),['jquery'],VERSION,true);   
-      
-          
     wp_enqueue_script('faq-js',get_theme_file_uri('/assets/js/faq.js'),['jquery'],VERSION,true);
-    wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),['jquery'],VERSION,true);
-	
-	
-	
 	wp_enqueue_script( 'eduhub-reservation-js', get_template_directory_uri() . '/assets/js/reservation.js', array( 'jquery' ), VERSION, true );
 		$ajaxurl = admin_url( 'admin-ajax.php' );
 		wp_localize_script( 'eduhub-reservation-js', 'eduhuburl', array( 'ajaxurl' => $ajaxurl ) );
-	
-	
-	
-	
-	
-	
-	
-	
-	
-   
+	if ( is_singular() ){ wp_enqueue_script( "comment-reply" );}
+	  wp_enqueue_script('main-js',get_theme_file_uri('/assets/js/main.js'),['jquery'],VERSION,true);
 }
 add_action('wp_enqueue_scripts','eduhub_assets');
-
 function eduhub_customizer_assets() {
 	wp_enqueue_script( "eduhub-customizer-js", get_theme_file_uri( "/assets/js/customizer.js" ), array(
 		'jquery',
@@ -185,11 +151,7 @@ function eduhub_customizer_assets() {
 		'customize-preview'
 	), time(), true );
 }
-
 add_action( "customize_preview_init", 'eduhub_customizer_assets' );
-
-
-
 function eduhub_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Single page Sidebar', 'eduhub' ),
@@ -204,9 +166,9 @@ function eduhub_widgets_init() {
 		'name'          => esc_html__( 'Blog Sidebar', 'eduhub' ),
 		'id'            => 'sidebar-blog',
 		'description'   => esc_html__( 'Add widgets here.', 'eduhub' ),
-		'before_widget' => '<div id="%1$s" class="p-2 text-light widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="p-2 widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title text-light">',
+		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
         ;register_sidebar( array(
@@ -280,25 +242,26 @@ function eduhub_about_page_template_banner() {
 		?>);
 		background-size: cover;
 	}
-
 </style>
 <?php
         }
     }
 }
 add_action( "wp_head", "eduhub_about_page_template_banner", 11 );
-
-
-
-function excerpt($num) {
-	$limit = $num+1;
-	$excerpt = explode(' ', get_the_excerpt(), $limit);
-	array_pop($excerpt);
-	$excerpt = implode(" ",$excerpt)." <a href='" .get_permalink($post->ID) ." ' class='".readmore."'>Continue Reading &raquo;</a>";
-	echo $excerpt;
+function eduhub_excerpt_more( $more ) {
+    if ( ! is_single() ) {
+        $more = sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+            get_permalink( get_the_ID() ),
+            __( 'Read More', 'eduhub' )
+        );
+    }
+    return $more;
 }
-
-
+add_filter( 'excerpt_more', 'eduhub_excerpt_more' );
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 function eduhub_search_form( $form ) {
     $homedir      = home_url( "/" );
     $label        = __( "Search for:", "eduhub" );
@@ -310,38 +273,25 @@ function eduhub_search_form( $form ) {
         <input type="search" class="form-control" placeholder="Type Keywords" value="" name="s"
                title="{$label}" autocomplete="off">
     </label>
-    {$post_type}
     <input type="submit" class="btn btn-primary btn-sm" value="{$button_label}">
 </form>
 FORM;
     return $newform;
 }
 add_filter( "get_search_form", "eduhub_search_form" );
-
-
-
-
-
-
-
-
 function eduhub_process_reservation() {
-
 	if ( check_ajax_referer( 'reservation', 'rn' ) ) {
 		$name    = sanitize_text_field( $_POST['name'] );
 		$email   = sanitize_text_field( $_POST['email'] );
 		$country = sanitize_text_field( $_POST['country'] );
 		$phone   = sanitize_text_field( $_POST['phone'] );
-
 		$data = array(
 			'name'    => $name,
 			'email'   => $email,
 			'phone'   => $phone,
 			'country' => $country,
-			
 		);
 		//print_r( $data );
-
 		$reservation_arguments = array(
 			'post_type'   => 'reservation',
 			'post_author' => 1,
@@ -350,7 +300,6 @@ function eduhub_process_reservation() {
 			'post_title'  => sprintf( '%s - Apply for %s Email: %s Mobile Number: %s', $name, $country, $email, $phone),
 			'meta_input'  => $data
 		);
-
 		$reservations = new WP_Query( array(
 			'post_type'   => 'reservation',
 			'post_status' => 'publish',
@@ -371,40 +320,30 @@ function eduhub_process_reservation() {
 		} else {
 			$wp_error       = '';
 			wp_insert_post( $reservation_arguments, $wp_error );
-
 			//transient check
 			$reservation_count = get_transient('res_count')?get_transient('res_count'):0;
 			//transient check end
-
 			if ( ! $wp_error ) {
-
 				$reservation_count++;
 				set_transient('res_count',$reservation_count,0);
 				echo "Successful";
 			}
 		}
-
 	} else {
 		echo 'Not allowed';
 	}
 	die();
 }
-
 add_action( 'wp_ajax_reservation', 'eduhub_process_reservation' );
 add_action( 'wp_ajax_nopriv_reservation', 'eduhub_process_reservation' );
-
-
-
 function eduhub_change_menu($menu){
 	$reservation_count = get_transient('res_count')?get_transient('res_count'):0;
 	if($reservation_count>0){
 		$menu[11][0] = "Reservation <span class='awaiting-mod'>{$reservation_count}</span> ";
 	}
 	return $menu;
-	
 }
 add_filter('add_menu_classes','eduhub_change_menu');
-
 function eduhub_admin_scripts($screen){
 	$_screen = get_current_screen();
 	if('edit.php'==$screen && 'reservation'==$_screen->post_type){
@@ -412,10 +351,6 @@ function eduhub_admin_scripts($screen){
 	}
 }
 add_action('admin_enqueue_scripts','eduhub_admin_scripts');
-
-
-
-
 // Add Menu Class li Tag
 function tanem_menu_item_class($classes, $item)
 {
@@ -423,7 +358,6 @@ function tanem_menu_item_class($classes, $item)
     return $classes;
 }
 add_filter('nav_menu_css_class', 'tanem_menu_item_class', 10, 2);
-
 // Add Menu Class a Tag
 function add_link_atts($atts)
 {
@@ -431,7 +365,3 @@ function add_link_atts($atts)
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_link_atts', 100, 1);
-
-
-
-

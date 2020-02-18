@@ -173,7 +173,7 @@ function eduhub_about_us_customize_register($wp_eduhub){
 		'title'           => __( 'Study Abroad Settings', 'eduhub' ),
 		'priority'        => '40',
 		'active_callback' => function () {
-			if(is_page_template('page-templates/study.php')){
+			if(is_page_template('page-templates/study-abroads.php')){
 				return true;
 			}
 			return false;

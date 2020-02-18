@@ -30,17 +30,17 @@
 					?>
 					<div class="d-md-flex">
 						<div class="form-group">
-							<input type="text" id="name" class="form-control required" placeholder="Name" required>
+							<input type="text" id="name" class="form-control required" placeholder="<?php _e('Name','eduhub');?>" required>
 						</div>
 					</div>
 					<div class="d-md-flex">
 						<div class="form-group">
-							<input  type="text" class="form-control required" placeholder="Phone" id="phone" required>
+							<input  type="text" class="form-control required" placeholder="<?php _e('Phone','eduhub');?>" id="phone" required>
 						</div>
 					</div>					
 					<div class="d-md-flex">
 						<div class="form-group">
-							<input type="email" class="form-control required" placeholder="Email" id="email" required>
+							<input type="email" class="form-control required" placeholder="<?php _e('Email','eduhub');?>" id="email" required>
 						</div>
 					</div>
 					<div class="d-md-flex">
@@ -54,7 +54,7 @@
 										<option value="Canada" class=" bg-primary"><?php _e('Canada','eduhub');?></option>
 										<option value="USA" class=" bg-primary"><?php _e('USA','eduhub');?></option>
 										<option value="Australia" class=" bg-primary"><?php _e('Australia','eduhub');?></option>
-										<option value="Newziland" class=" bg-primary"><?php _e('Newziland','eduhub');?></option>
+										<option value="Europe" class=" bg-primary"><?php _e('Europe','eduhub');?></option>
 									</select>
 								</div>
 							</div>

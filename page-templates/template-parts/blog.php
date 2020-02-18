@@ -31,7 +31,7 @@
                     ?>
                         <div class="text bg-white p-4">
                             <h3 class="heading"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-                            <p><?php echo excerpt('30'); ?></p>
+                           <p><?php the_excerpt(); ?></p>
                             
                         </div>
                     </div>

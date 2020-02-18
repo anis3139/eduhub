@@ -6,10 +6,6 @@
 <section <?php post_class();?> class="ftco-section bg-light">
     <div class="container">
         <div class="row">
-
-            
-
-
             <div class="col-md-10 offset-md-1">
                 <h2><?php the_archive_title('<h2 class="mb-5 bg-light text-dark text-center">','</h2>');?></h2>
 

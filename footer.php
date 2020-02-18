@@ -1,7 +1,7 @@
 <footer class="ftco-footer ftco-bg-dark ftco-section">
 	<div class="container">
 		<div class="row mb-5">
-			<div class="col-md-6 col-lg-3">
+			<div class="col-md-6 col-lg-3 eduhub-footer">
 				<div class="ftco-footer-widget mb-5">
 					<?php 
                          if ( is_active_sidebar( "footer-sidebar-1" ) ) {
@@ -10,7 +10,7 @@
                     ?>
 				</div>
 			</div>
-			<div class="col-md-6 col-lg-3">
+			<div class="col-md-6 col-lg-3 eduhub-footer">
 				<div class="ftco-footer-widget mb-5">
 					<?php 
                          if ( is_active_sidebar( "footer-sidebar-2" ) ) {
@@ -19,7 +19,7 @@
                     ?>
 				</div>
 			</div>
-			<div class="col-md-6 col-lg-3">
+			<div class="col-md-6 col-lg-3 eduhub-footer">
 				<div class="ftco-footer-widget mb-5 ml-md-4">
 					<?php 
                          if ( is_active_sidebar( "footer-sidebar-3" ) ) {
@@ -28,7 +28,7 @@
                     ?>
 				</div>
 			</div>
-			<div class="col-md-6 col-lg-3">
+			<div class="col-md-6 col-lg-3 eduhub-footer">
 				<div class="ftco-footer-widget mb-5">
 					<?php 
                          if ( is_active_sidebar( "footer-sidebar-4" ) ) {

@@ -41,14 +41,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
         'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub'),
+             'flaticon-reading' => __( 'Reading','eduhub'),
+             'flaticon-books' => __( 'Books','eduhub' ),
+             'flaticon-diploma' => __( 'Diploma' ,'eduhub'),
+             'flaticon-security' => __( 'Security','eduhub' ),
+             'flaticon-education' => __( 'Education','eduhub'),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub'),
+             'flaticon-kids' => __( 'kids','eduhub'),
         ),
 	) );
     
@@ -101,14 +101,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
          'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub'),
+             'flaticon-reading' => __( 'Reading','eduhub'),
+             'flaticon-books' => __( 'Books','eduhub'),
+             'flaticon-diploma' => __( 'Diploma','eduhub'),
+             'flaticon-security' => __( 'Security','eduhub'),
+             'flaticon-education' => __( 'Education','eduhub' ),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub' ),
+             'flaticon-kids' => __( 'kids','eduhub'),
         ),
 	) );
     
@@ -163,14 +163,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
        'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub' ),
+             'flaticon-reading' => __( 'Reading','eduhub' ),
+             'flaticon-books' => __( 'Books','eduhub' ),
+             'flaticon-diploma' => __( 'Diploma','eduhub' ),
+             'flaticon-security' => __( 'Security','eduhub' ),
+             'flaticon-education' => __( 'Education','eduhub' ),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub' ),
+             'flaticon-kids' => __( 'kids','eduhub' ),
         ),
         
 	) );
@@ -225,14 +225,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Featured Post Icon', 'eduhub' ),
 		'type'     => 'select',
         'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub' ),
+             'flaticon-reading' => __( 'Reading','eduhub' ),
+             'flaticon-books' => __( 'Books','eduhub' ),
+             'flaticon-diploma' => __( 'Diploma','eduhub' ),
+             'flaticon-security' => __( 'Security','eduhub' ),
+             'flaticon-education' => __( 'Education','eduhub' ),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub' ),
+             'flaticon-kids' => __( 'kids','eduhub' ),
         ),
         
 	) );
@@ -698,7 +698,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
 
 	$wp_eduhub->add_control( 'eduhub_apply_now_url', array(
-		'label'    => __( 'Apply Now Button Url', 'eduhub' ),
+		'label'    => __( 'Apply Now Button URL', 'eduhub' ),
 		'section'  => 'eduhub_front_page',
 		'type'     => 'url'
 	) );
@@ -825,6 +825,34 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 			return is_page_template( 'page-templates/landing.php' );
 		}
 	) );
+	
+	
+	   
+    $wp_eduhub->add_setting( 'eduhub_Statistics_image', array(
+		'default'   => "Upload Image",
+		'transport' => 'refresh',
+	) );
+
+	$wp_eduhub->add_control(
+		new WP_Customize_Image_Control(
+			$wp_eduhub,
+			'eduhub_Statistics_image',
+			array(
+				'label'      => __( 'Upload Statistics Image', 'eduhub' ),
+				'section'    => 'eduhub_statistics_section',
+				'settings'   => 'eduhub_Statistics_image',
+			)
+		)
+	);
+	
+	
+	
+	
+	
+	
+	
+	
+	
     $wp_eduhub->add_setting( 'eduhub_statistics_heading', array(
 		'default'   => "",
 		'transport' => 'postMessage',
@@ -873,14 +901,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
 		'type'     => 'select',
          'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub' ),
+             'flaticon-reading' => __( 'Reading','eduhub' ),
+             'flaticon-books' => __( 'Books','eduhub' ),
+             'flaticon-diploma' => __( 'Diploma','eduhub' ),
+             'flaticon-security' => __( 'Security','eduhub' ),
+             'flaticon-education' => __( 'Education','eduhub' ),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub' ),
+             'flaticon-kids' => __( 'kids','eduhub' ),
         ),
         
 	) );
@@ -928,14 +956,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
 		'type'     => 'select',
          'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub' ),
+             'flaticon-reading' => __( 'Reading','eduhub' ),
+             'flaticon-books' => __( 'Books','eduhub' ),
+             'flaticon-diploma' => __( 'Diploma','eduhub' ),
+             'flaticon-security' => __( 'Security','eduhub' ),
+             'flaticon-education' => __( 'Education','eduhub' ),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub' ),
+             'flaticon-kids' => __( 'kids','eduhub' ),
         ),
         
 	) );
@@ -986,14 +1014,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
 		'type'     => 'select',
          'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub' ),
+             'flaticon-reading' => __( 'Reading','eduhub' ),
+             'flaticon-books' => __( 'Books','eduhub' ),
+             'flaticon-diploma' => __( 'Diploma','eduhub' ),
+             'flaticon-security' => __( 'Security','eduhub' ),
+             'flaticon-education' => __( 'Education','eduhub' ),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub' ),
+             'flaticon-kids' => __( 'kids','eduhub' ),
         ),
         
 	) );
@@ -1047,14 +1075,14 @@ function eduhub_customizer_settings( $wp_eduhub ) {
         'description' => __( 'Select Statistics Post Icon', 'eduhub' ),
 		'type'     => 'select',
          'choices' => array(
-             'flaticon-teacher' => __( 'Teacher' ),
-             'flaticon-reading' => __( 'Reading' ),
-             'flaticon-books' => __( 'Books' ),
-             'flaticon-diploma' => __( 'Diploma' ),
-             'flaticon-security' => __( 'Security' ),
-             'flaticon-education' => __( 'Education' ),
-             'flaticon-jigsaw' => __( 'Jigsaw' ),
-             'flaticon-kids' => __( 'kids' ),
+             'flaticon-teacher' => __( 'Teacher','eduhub' ),
+             'flaticon-reading' => __( 'Reading','eduhub' ),
+             'flaticon-books' => __( 'Books','eduhub' ),
+             'flaticon-diploma' => __( 'Diploma','eduhub' ),
+             'flaticon-security' => __( 'Security','eduhub' ),
+             'flaticon-education' => __( 'Education','eduhub' ),
+             'flaticon-jigsaw' => __( 'Jigsaw','eduhub' ),
+             'flaticon-kids' => __( 'kids','eduhub' ),
         ),
         
 	) );
@@ -1091,23 +1119,7 @@ function eduhub_customizer_settings( $wp_eduhub ) {
 	) );
     
     
-   
-    $wp_eduhub->add_setting( 'eduhub_Statistics_image', array(
-		'default'   => "Upload Image",
-		'transport' => 'refresh',
-	) );
 
-	$wp_eduhub->add_control(
-		new WP_Customize_Image_Control(
-			$wp_eduhub,
-			'$wp_eduhub',
-			array(
-				'label'      => __( 'Upload Statistics Image', 'eduhub' ),
-				'section'    => 'eduhub_statistics_section',
-				'settings'   => 'eduhub_Statistics_image',
-			)
-		)
-	);
     
 	
 	

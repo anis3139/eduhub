@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: Study
+* Template Name: Study Abroad
 */
 ?>
 
@@ -22,7 +22,7 @@
 			<div class="col-md-6 p-5">
 				<?php
                         $eduhub_study_abroad_posts = new WP_Query( array(
-                        'post_type' => 'study-abroad',
+                        'post_type' => 'study-abroads',
                         'posts_per_page'      => -1,  
                         ) );
                         if( $eduhub_study_abroad_posts->have_posts() ):

@@ -24,7 +24,7 @@
                     ?>
                 </p>
                 <div class="post-pagination pt-5">
-                    <h3 class="border border-primary"><?php _e('Next & Previous Post');?></h3>
+                    <h3 class="border border-primary"><?php _e('Next & Previous Post','eduhub');?></h3>
                     <?php 
                     next_post_link();
                     echo "<br/>";

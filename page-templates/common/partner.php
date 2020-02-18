@@ -28,7 +28,7 @@
                            ?>
 
                          <div class="single-client">
-                             <img src="<?php echo esc_url($eduhub_partners_iamge);?>" alt="">
+                             <img src="<?php echo esc_url($eduhub_partners_iamge);?>" alt="<?php the_title();?>">
                          </div>
                          <?php 
                         endwhile;
