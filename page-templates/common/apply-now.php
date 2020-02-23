@@ -1,6 +1,6 @@
 <section id="apply-now-image" class="ftco-intro mt-5" style="background-image: url(<?php echo esc_url(get_theme_mod('eduhub_apply_now_image'));?>);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container p-2">
         <div class="row">
             <div class="col-md-9">
                 <h2 id="eduhub-apply-now-heading"><?php echo esc_html(get_theme_mod('eduhub_apply_now_heading',__('Lets meet and talk! Call us at','eduhub')));?></h2>

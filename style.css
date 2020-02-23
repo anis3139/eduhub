@@ -1,10 +1,10 @@
 /*
 Theme Name: eduhub
-Theme URI: https://github.com/anis3139/eduhub/archive/master.zip
+Theme URI: https://www.rainyforest.xyz/
 Author: Anis Arronno
 Author URI:
 Description:  Multi Pages Theme
-Version: 1.0.0
+Version: 1.01.09
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: eduhub
@@ -147,6 +147,7 @@ a img.aligncenter {
 --------------------------------------------------------------*/
 body {
 	margin: 0;
+	padding:0;
 	-webkit-font-smoothing: auto;
 }
 article,
@@ -658,6 +659,14 @@ Apply Now
 	font-size: 50px;
 	font-weight: bold;
 }
+@media only screen and (max-width:720px) {
+	#eduhub-apply-phone {
+	font-size: 35px;
+	
+}
+}
+
+
 
 /*-----------
 client-area
@@ -820,16 +829,24 @@ About Page
 
 .our-history hr {}
 
-.about-underline {
+.about-underline{
 	border: 1px solid blue;
 	width: 30%;
 }
-
+#eduhub-about-featured-image>img{
+	width:100%;
+	height:auto;
+}
 
 /*
 -------------
 Apply Form
 ---------------*/
+.apply-now-img{
+	background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+}
 select:required:invalid {
 	color: red;
 }
@@ -851,7 +868,7 @@ option {
 	position: relative;
 	top: 40px;
 	left: 0px;
-	max-height: 200px;
+	max-height: 220px;
 	max-width: 580px;
 	color: #FFF;
 	border-radius: 0 100px 100px 0;
@@ -998,18 +1015,44 @@ nav.navbar ul > li > ul.sub_menu > li:not(:last-child) {
 @media only screen and (max-width:720px) {
 	nav.navbar ul > li ul.sub_menu {
 		left: 20%;
-		background: rgba(255, 255, 255, 0.7);
+		background: rgba(255, 255, 255, 1.0);
 	}
 }
 
+@media (max-width: 720px) {
+	.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+		padding-left: 10%;
+		padding-right: 0;
+		padding-top: .9rem;
+		padding-bottom: .9rem;
+		color: #000;
+		background-color: #fff;
+	}
 
+	.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+		color: blue;
+	}
+	.ftco-navbar-light.scrolled.awake {
+		margin-top: 0px;
+		-webkit-transition: .1s all ease-out;
+		-o-transition: .1s all ease-out;
+		transition: .1s all ease-out;
+	}
+}
+
+.ftco-navbar-light.scrolled .nav-link {
+	color: #000 !important;
+}
 
 
 /*
 -------------------
 Study Abroad
 ----------------------*/
-
+#eduhub-study-abroad-image>img{
+	width:100%;
+	height:auto;
+}
 
 .study-country-item {
 	margin: 5px;
@@ -1045,12 +1088,78 @@ Study Abroad
 	}
 
 }
+/*
+-----------
+slider
+--------------
+*/
+@media only screen and (max-width:768px) {
+.owl-carousel.home-slider .slider-item {
+	background-size: 100% 100%;
+	height: 350px;
+	clear:both;
+}
+	.owl-carousel.home-slider .slider-item .slider-text{
+		height: 350px;
+	}
+	.owl-carousel.home-slider {
+    height: auto;
+    
+}
+}
+@media only screen and (max-width:576px) {
+.owl-carousel.home-slider .slider-item {
+	background-size: 100% 100%;
+	height: 280px;
+	clear:both;
+}
+	.owl-carousel.home-slider .slider-item .slider-text{
+		height: 280px;
+	}
+	.owl-carousel.home-slider {
+    height: auto;
+    
+}
+}
+@media only screen and (max-width:480px) {
+.owl-carousel.home-slider .slider-item {
+	background-size: 100% 100%;
+	height: 220px;
+	clear:both;
+}
+	.owl-carousel.home-slider .slider-item .slider-text{
+		height: 220px;
+	}
+	.owl-carousel.home-slider {
+    height: auto;
+    
+}
+}
+@media only screen and (max-width:360px) {
+.owl-carousel.home-slider .slider-item {
+	background-size: 100% 100%;
+	height: 180px;
+	clear:both;
+}
+	.owl-carousel.home-slider .slider-item .slider-text{
+		height: 180px;
+	}
+	.owl-carousel.home-slider {
+    height: auto;
+    
+}
+}
+.owl-carousel.owl-drag .owl-item {
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
 
-
-
-
-
-
-
+@media screen and (max-width: 782px){
+html {
+    margin-top:0px !important;
+    margin-left: 0px;
+	padding-left:0px;
+}
+}
 
 

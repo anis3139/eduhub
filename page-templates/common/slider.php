@@ -20,7 +20,6 @@ $eduhub_slider_iamge=get_the_post_thumbnail_url(null, "full");
           <div class="col-md-8 text-center ftco-animate">
             <h1 class="mb-4 animated zoomIn"><?php bloginfo('description')?></h1>
              <p class="animated fadeInUp"><?php echo esc_html(wp_trim_words(get_the_excerpt(),27));?></p>
-            <p  id="eduhub-apply-now-button"><a href="<?php echo esc_html(get_theme_mod('eduhub_apply_now_url'));?>" class="btn btn-secondary px-3 py-2 mt-5"><?php echo esc_html(get_theme_mod('eduhub_apply_now_button',__('Apply Now','eduhub')));?></a></p>
           </div>
         </div>
         </div>
