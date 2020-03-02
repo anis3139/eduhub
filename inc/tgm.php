@@ -68,13 +68,18 @@ function eduhub_register_required_plugins() {
         ),
 				
 		array(
-            'name'     => 'Post Meta Inspector',
-            'slug'     => 'post-meta-inspector',
+            'name'     => 'Everest Form',
+            'slug'     => 'everest-forms',
             'required' => false,
         ),
 		array(
             'name'     => 'Shortcode UI',
             'slug'     => 'shortcode-ui',
+            'required' => false,
+        ),		
+		array(
+            'name'     => 'everest forms',
+            'slug'     => 'everest-forms',
             'required' => false,
         ),				
 		array(

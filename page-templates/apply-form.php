@@ -25,7 +25,20 @@
 			</div>
 		</div>
 		<div class="col-md-6 p-5 px-md-5 apply-now-right">
-			<form action="#" class="appointment-form ftco-animate">
+					<?php 	
+                       if(have_posts()):
+                       	while(have_posts()):
+						   the_post();
+						  ?>
+						  <?php 
+							echo do_shortcode(the_content());
+							?>
+						  
+						  <?php
+						  endwhile;
+						  endif;
+                        ?>
+			<!--<form action="#" class="appointment-form ftco-animate">
 				<?php
 					wp_nonce_field('reservation','rn');
 					?>
@@ -67,7 +80,7 @@
 						<input type="submit" id="reservenow" value="Apply Now" class="btn btn-secondary  py-3 px-4">
 					</div>
 				</div>
-			</form>
+			</form>-->
 		</div>
 	</div>
 

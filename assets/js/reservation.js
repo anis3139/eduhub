@@ -1,25 +1,8 @@
-;(function($){
-    $(document).ready(function(){
-
-        $("#reservenow").on('click',function(){
-            $.post(eduhuburl.ajaxurl,{
-                action:'reservation',
-                name:$("#name").val(),
-                email:$("#email").val(),
-                phone:$("#phone").val(),
-                country:$("#country").val(),
-                rn:$("#rn").val()
-            },function(data){
-                console.log(data);
-                if('Successful'==data){
-                    alert('Your Application Submitted');
-                }else if('Duplicate'==data){
-                    alert('You have already placed a Application. No need to submit again.');
-                }
-
-            });
-            return false;
-        });
-
-    });
-})(jQuery);
+$(window).scroll(function(){
+    if($(this).scrollTop()>70) {
+        $('#header img').attr('src','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/600px-Apple_logo_black.svg.png');
+    }
+    else {
+        $('#header img').attr('src','https://www.seeklogo.net/wp-content/uploads/2012/12/apple-logo-eps-logo-vector-400x400.png');
+    }
+})
